@@ -1,0 +1,78 @@
+#ifndef BOARD_H
+#define BOARD_H
+
+#include "Piece.h"
+#include "Case.h"
+#include "TeamColor.h"
+#include "Position.h"
+#include <array>
+#include "Direction.h"
+
+
+/**
+ *This class represent the board.
+ *The board is a 2D array of Case. Its size is 10x10
+ */
+namespace stratego {
+
+    class Board{
+
+    public:
+        static const size_t row_=10;
+        static const size_t column_=10;
+
+    private:
+        std::array<std::array<Case*, column_>,row_> board_;
+        // pointeur nue qui va faire référence à notre pièce
+        // Utiliser static pour mettre des cases dedans sinon bug
+
+        void initializeStartedBoard();
+
+        void initializeWaterBoard();
+
+    public :
+        //Doit connaitre le nombre de fichier à lire
+        Board();
+
+        void initializeBoardPlayer(std::string red, std::string blue);
+
+        std::array<std::array<Case*, column_>,row_> const & board() const;
+
+        Piece & getCase(Position pos) const;
+
+        bool isCasePiece(Position pos) const;
+
+        bool isCaseWater(Position pos) const;
+
+        CaseType getTypeCase(Position pos) const;
+
+        void put(Case & piece, Position pos);
+
+        void movePiece(Position currentPos, Position newPos);
+
+        void deleteCase(Position position);
+
+        bool isCombat(Position positionPiece, Position newPosition) const;
+
+        bool isSameTeam(Position positionPiece, Position newPosition) const;
+
+        bool isSameTeam(Position positionPiece, TeamColor team) const;
+
+        bool isInside(Position pos) const;
+
+        bool canBePut(Position currentPos, Position newPos) const;
+
+        Position newPositionDirection(Position & pos, Direction d);
+
+        ~Board();
+
+        void combat(Position currentPos, Position newPos);
+
+        private :
+
+        bool checkPieceInitializeBoard(ValeurPiece valuePiece) const;
+
+    };
+}
+
+#endif // BOARD_H

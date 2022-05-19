@@ -1,0 +1,165 @@
+\hypertarget{classstratego_1_1_piece}{}\doxysection{stratego\+::Piece Class Reference}
+\label{classstratego_1_1_piece}\index{stratego::Piece@{stratego::Piece}}
+
+
+The \mbox{\hyperlink{classstratego_1_1_piece}{Piece}} class.  
+
+
+
+
+{\ttfamily \#include $<$piece.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classstratego_1_1_piece_a1eb6263dae3e218463918fb475253244}\label{classstratego_1_1_piece_a1eb6263dae3e218463918fb475253244}} 
+{\bfseries Piece} (const \mbox{\hyperlink{namespacestratego_a06ac02db02f93bd0ec9ebff7b7bcb16f}{Value\+Piece}} \mbox{\hyperlink{classstratego_1_1_piece_ab7e382eec2e38819d5d16dba0c8949b5}{value\+Piece}}, const \mbox{\hyperlink{namespacestratego_a83d6fb949f3282c71b9bced562c7b9d2}{Team\+Color}} \mbox{\hyperlink{classstratego_1_1_piece_a8c919f459e6e7cc67c213208d6e6a881}{team}})
+\item 
+\mbox{\hyperlink{namespacestratego_a06ac02db02f93bd0ec9ebff7b7bcb16f}{Value\+Piece}} \mbox{\hyperlink{classstratego_1_1_piece_ab7e382eec2e38819d5d16dba0c8949b5}{value\+Piece}} () const
+\begin{DoxyCompactList}\small\item\em value\+Piece \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacestratego_a83d6fb949f3282c71b9bced562c7b9d2}{Team\+Color}} \mbox{\hyperlink{classstratego_1_1_piece_a8c919f459e6e7cc67c213208d6e6a881}{team}} () const
+\begin{DoxyCompactList}\small\item\em team \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classstratego_1_1_piece_ab455e275b5a62f9e303dbb48869ab5ff}{movable}} () const
+\begin{DoxyCompactList}\small\item\em movable \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classstratego_1_1_piece_aad30991a0e0c971c8c8c7f774df7da12}{explosible}} () const
+\begin{DoxyCompactList}\small\item\em explosible \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classstratego_1_1_piece_a984a54492934806dc9016962d6a95d9a}{is\+Flag}} () const
+\begin{DoxyCompactList}\small\item\em is\+Drapeau \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classstratego_1_1_piece_ab686878e6afd1548006dc509541122c1}{is\+Bomb}} () const
+\begin{DoxyCompactList}\small\item\em is\+Bombe \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classstratego_1_1_piece_acc37c297d35ff21972ae4faf9feec945}{operator==}} (const \mbox{\hyperlink{classstratego_1_1_piece}{Piece}} \&other) const
+\begin{DoxyCompactList}\small\item\em operator == \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classstratego_1_1_piece_acb98a43a12a27e8c065898f18e4d6aa0}{operator$>$}} (const \mbox{\hyperlink{classstratego_1_1_piece}{Piece}} \&other) const
+\begin{DoxyCompactList}\small\item\em operator \texorpdfstring{$>$}{>} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classstratego_1_1_piece}{Piece}} class. 
+
+this class reprensend a \mbox{\hyperlink{classstratego_1_1_piece}{Piece}}, a piece is a case 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classstratego_1_1_piece_aad30991a0e0c971c8c8c7f774df7da12}\label{classstratego_1_1_piece_aad30991a0e0c971c8c8c7f774df7da12}} 
+\index{stratego::Piece@{stratego::Piece}!explosible@{explosible}}
+\index{explosible@{explosible}!stratego::Piece@{stratego::Piece}}
+\doxysubsubsection{\texorpdfstring{explosible()}{explosible()}}
+{\footnotesize\ttfamily bool stratego\+::\+Piece\+::explosible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+explosible 
+
+check if the piece is explosible (getter) \begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_piece_ab686878e6afd1548006dc509541122c1}\label{classstratego_1_1_piece_ab686878e6afd1548006dc509541122c1}} 
+\index{stratego::Piece@{stratego::Piece}!isBomb@{isBomb}}
+\index{isBomb@{isBomb}!stratego::Piece@{stratego::Piece}}
+\doxysubsubsection{\texorpdfstring{isBomb()}{isBomb()}}
+{\footnotesize\ttfamily bool stratego\+::\+Piece\+::is\+Bomb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+is\+Bombe 
+
+check if the piece is a bomb \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_piece_a984a54492934806dc9016962d6a95d9a}\label{classstratego_1_1_piece_a984a54492934806dc9016962d6a95d9a}} 
+\index{stratego::Piece@{stratego::Piece}!isFlag@{isFlag}}
+\index{isFlag@{isFlag}!stratego::Piece@{stratego::Piece}}
+\doxysubsubsection{\texorpdfstring{isFlag()}{isFlag()}}
+{\footnotesize\ttfamily bool stratego\+::\+Piece\+::is\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+is\+Drapeau 
+
+check if the piece is a flag \begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_piece_ab455e275b5a62f9e303dbb48869ab5ff}\label{classstratego_1_1_piece_ab455e275b5a62f9e303dbb48869ab5ff}} 
+\index{stratego::Piece@{stratego::Piece}!movable@{movable}}
+\index{movable@{movable}!stratego::Piece@{stratego::Piece}}
+\doxysubsubsection{\texorpdfstring{movable()}{movable()}}
+{\footnotesize\ttfamily bool stratego\+::\+Piece\+::movable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+movable 
+
+check if the piece is movable (getter) \begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_piece_acc37c297d35ff21972ae4faf9feec945}\label{classstratego_1_1_piece_acc37c297d35ff21972ae4faf9feec945}} 
+\index{stratego::Piece@{stratego::Piece}!operator==@{operator==}}
+\index{operator==@{operator==}!stratego::Piece@{stratego::Piece}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool stratego\+::\+Piece\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classstratego_1_1_piece}{Piece}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+operator == 
+
+Operator to check if a piece equal to another Return true if equal else false
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \mbox{\hyperlink{classstratego_1_1_piece}{Piece}}\+: other piece to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_piece_acb98a43a12a27e8c065898f18e4d6aa0}\label{classstratego_1_1_piece_acb98a43a12a27e8c065898f18e4d6aa0}} 
+\index{stratego::Piece@{stratego::Piece}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!stratego::Piece@{stratego::Piece}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool stratego\+::\+Piece\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classstratego_1_1_piece}{Piece}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+operator \texorpdfstring{$>$}{>} 
+
+Operator to check if a piece superior that the other Return true if superior else false
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \mbox{\hyperlink{classstratego_1_1_piece}{Piece}}\+: other piece to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_piece_a8c919f459e6e7cc67c213208d6e6a881}\label{classstratego_1_1_piece_a8c919f459e6e7cc67c213208d6e6a881}} 
+\index{stratego::Piece@{stratego::Piece}!team@{team}}
+\index{team@{team}!stratego::Piece@{stratego::Piece}}
+\doxysubsubsection{\texorpdfstring{team()}{team()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacestratego_a83d6fb949f3282c71b9bced562c7b9d2}{Team\+Color}} stratego\+::\+Piece\+::team (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+team 
+
+getter \begin{DoxyReturn}{Returns}
+Team\+Color 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_piece_ab7e382eec2e38819d5d16dba0c8949b5}\label{classstratego_1_1_piece_ab7e382eec2e38819d5d16dba0c8949b5}} 
+\index{stratego::Piece@{stratego::Piece}!valuePiece@{valuePiece}}
+\index{valuePiece@{valuePiece}!stratego::Piece@{stratego::Piece}}
+\doxysubsubsection{\texorpdfstring{valuePiece()}{valuePiece()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacestratego_a06ac02db02f93bd0ec9ebff7b7bcb16f}{Value\+Piece}} stratego\+::\+Piece\+::value\+Piece (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+value\+Piece 
+
+getter \begin{DoxyReturn}{Returns}
+Value\+Piece 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+piece.\+h\item 
+piece.\+cpp\end{DoxyCompactItemize}

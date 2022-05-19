@@ -1,0 +1,433 @@
+\hypertarget{classstratego_1_1_game}{}\doxysection{stratego\+::Game Class Reference}
+\label{classstratego_1_1_game}\index{stratego::Game@{stratego::Game}}
+
+
+The \mbox{\hyperlink{classstratego_1_1_game}{Game}} class.  
+
+
+
+
+{\ttfamily \#include $<$game.\+h$>$}
+
+Inheritance diagram for stratego\+::Game\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classstratego_1_1_game}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classstratego_1_1_game_ac560e9ea4b49d1d81159a15b02bc0910}{Game}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classstratego_1_1_game}{Game}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classstratego_1_1_game_ae1a49d139ece20d9a8bcce83d6177ece}{Game}} (\mbox{\hyperlink{classstratego_1_1_board}{Board}} board)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classstratego_1_1_game}{Game}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classstratego_1_1_game_a58d2328811b13827a3419924362927b2}{check\+End}} () const
+\begin{DoxyCompactList}\small\item\em check\+End \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classstratego_1_1_game_a7316cbaa4f63419e15d0d6efd140bf55}{check\+End\+Flag}} () const
+\begin{DoxyCompactList}\small\item\em check\+End \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstratego_1_1_game_a3fca7c8fa71a4939d00a1952879fe9d8}{play}} ()
+\begin{DoxyCompactList}\small\item\em play \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classstratego_1_1_board}{Board}} \& \mbox{\hyperlink{classstratego_1_1_game_af1331afab5fbe93c3e82e401d548f6ba}{get\+Board}} ()
+\begin{DoxyCompactList}\small\item\em get\+Board \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacestratego_a23af443ff4526ab41766f45a424981e0}{State}} \mbox{\hyperlink{classstratego_1_1_game_a097581d3f0d3819b11ce165ce884f9a9}{get\+State}} () const
+\begin{DoxyCompactList}\small\item\em get\+State \end{DoxyCompactList}\item 
+std\+::optional$<$ \mbox{\hyperlink{classstratego_1_1_position}{Position}} $>$ \mbox{\hyperlink{classstratego_1_1_game_ad1ed3d3b4818e6850a3c9df11644562c}{get\+Current\+Position}} () const
+\begin{DoxyCompactList}\small\item\em get\+Current\+Position \end{DoxyCompactList}\item 
+std\+::optional$<$ \mbox{\hyperlink{classstratego_1_1_position}{Position}} $>$ \mbox{\hyperlink{classstratego_1_1_game_a2a9e3c81455854e46edf2ae857299520}{get\+New\+Position}} () const
+\begin{DoxyCompactList}\small\item\em get\+New\+Position \end{DoxyCompactList}\item 
+std\+::optional$<$ \mbox{\hyperlink{classstratego_1_1_piece}{Piece}} $>$ \mbox{\hyperlink{classstratego_1_1_game_a24dc611e6c2c33da060e0244bf5f14dc}{get\+Piece}} (\mbox{\hyperlink{classstratego_1_1_position}{Position}} position) const
+\begin{DoxyCompactList}\small\item\em get\+Piece \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacestratego_a83d6fb949f3282c71b9bced562c7b9d2}{Team\+Color}} \mbox{\hyperlink{classstratego_1_1_game_a7da30fa047de3b3c9d2f680fe8520874}{get\+Current\+Team}} () const
+\begin{DoxyCompactList}\small\item\em get\+Current\+Team \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classstratego_1_1_game_aad80cb4fcdbb7643279fec3e1b34caf3}{is\+In\+Debug\+Mode}} () const
+\begin{DoxyCompactList}\small\item\em is\+In\+Debug\+Mode \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classstratego_1_1_game_a114a6d7f6466f248377464bc78c23030}{is\+Ended}} () const
+\begin{DoxyCompactList}\small\item\em is\+Ended \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstratego_1_1_game_a6f59267bbdb434cdcd7b514546670676}{select\+Piece}} (\mbox{\hyperlink{classstratego_1_1_position}{Position}} position)
+\begin{DoxyCompactList}\small\item\em set\+Current\+Position \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstratego_1_1_game_a5e92cf46b74c5d2803a66764af40f304}{reverse\+Debug\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em reverse\+Debug\+Mode \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstratego_1_1_game_a1d963a3c3986a64b95f2b3894364ef08}{move\+Piece}} (\mbox{\hyperlink{namespacestratego_aa06b5b555bc849993199885b46329582}{Direction}} direction)
+\begin{DoxyCompactList}\small\item\em set\+New\+Position \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstratego_1_1_game_a4430e2a78166637879d93fe31f5beca6}{move\+Special\+Piece}} (\mbox{\hyperlink{namespacestratego_aa06b5b555bc849993199885b46329582}{Direction}} direction, int number\+Of\+Move)
+\begin{DoxyCompactList}\small\item\em set\+New\+Position\+Eclaireur \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classstratego_1_1_game_a877a6658d1f54914e7cbd8bc98ba0cc2}{can\+Be\+Selected}} (\mbox{\hyperlink{classstratego_1_1_position}{Position}} position) const
+\begin{DoxyCompactList}\small\item\em can\+Be\+Selected \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classstratego_1_1_game_a758e690d73ff235a3e72466c1d2bf5b0}{can\+Be\+Move}} (\mbox{\hyperlink{namespacestratego_aa06b5b555bc849993199885b46329582}{Direction}} direction) const
+\begin{DoxyCompactList}\small\item\em can\+Be\+Move \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classstratego_1_1_game_a31f37f87e0591bbe38f760e7162ce719}{can\+Be\+Move\+For\+Eclaireur}} (\mbox{\hyperlink{namespacestratego_aa06b5b555bc849993199885b46329582}{Direction}} direction, int number\+Of\+Move) const
+\begin{DoxyCompactList}\small\item\em can\+Be\+Move\+For\+Eclaireur \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstratego_1_1_game_a3e8743969f8b6d11bd8d621a80d6462c}{start}} (int nb\+File)
+\begin{DoxyCompactList}\small\item\em start \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classstratego_1_1_game_a02c720ac95de16e66335e0ab47a62e6a}{board\+To\+String}} () const
+\begin{DoxyCompactList}\small\item\em board\+To\+String \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacestratego_a83d6fb949f3282c71b9bced562c7b9d2}{Team\+Color}} \mbox{\hyperlink{classstratego_1_1_game_a637f399a7e43db85c96e4200e359e14c}{get\+Winner}} () const
+\begin{DoxyCompactList}\small\item\em get\+Winner \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classstratego_1_1_game_a498f78ec9eada05c0cf681cee430898e}\label{classstratego_1_1_game_a498f78ec9eada05c0cf681cee430898e}} 
+bool {\bfseries check\+End} ()
+\item 
+\mbox{\Hypertarget{classstratego_1_1_game_a3fca7c8fa71a4939d00a1952879fe9d8}\label{classstratego_1_1_game_a3fca7c8fa71a4939d00a1952879fe9d8}} 
+void {\bfseries play} ()
+\item 
+\mbox{\Hypertarget{classstratego_1_1_game_a500e61f0704c290e4c72d77946466cef}\label{classstratego_1_1_game_a500e61f0704c290e4c72d77946466cef}} 
+\mbox{\hyperlink{classstratego_1_1_board}{Board}} {\bfseries get\+Board} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classstratego_1_1_game}{Game}} class. 
+
+This class is the model of the app 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstratego_1_1_game_ac560e9ea4b49d1d81159a15b02bc0910}\label{classstratego_1_1_game_ac560e9ea4b49d1d81159a15b02bc0910}} 
+\index{stratego::Game@{stratego::Game}!Game@{Game}}
+\index{Game@{Game}!stratego::Game@{stratego::Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily stratego\+::\+Game\+::\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classstratego_1_1_game}{Game}}. 
+
+Constructor \mbox{\Hypertarget{classstratego_1_1_game_ae1a49d139ece20d9a8bcce83d6177ece}\label{classstratego_1_1_game_ae1a49d139ece20d9a8bcce83d6177ece}} 
+\index{stratego::Game@{stratego::Game}!Game@{Game}}
+\index{Game@{Game}!stratego::Game@{stratego::Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily stratego\+::\+Game\+::\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstratego_1_1_board}{Board}}}]{board }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classstratego_1_1_game}{Game}}. 
+
+DO NOT USE, CONSTRUCTOR FOR TEST ONLY
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classstratego_1_1_game_a02c720ac95de16e66335e0ab47a62e6a}\label{classstratego_1_1_game_a02c720ac95de16e66335e0ab47a62e6a}} 
+\index{stratego::Game@{stratego::Game}!boardToString@{boardToString}}
+\index{boardToString@{boardToString}!stratego::Game@{stratego::Game}}
+\doxysubsubsection{\texorpdfstring{boardToString()}{boardToString()}}
+{\footnotesize\ttfamily std\+::string stratego\+::\+Game\+::board\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+board\+To\+String 
+
+Convert the board to a string \begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_game_a758e690d73ff235a3e72466c1d2bf5b0}\label{classstratego_1_1_game_a758e690d73ff235a3e72466c1d2bf5b0}} 
+\index{stratego::Game@{stratego::Game}!canBeMove@{canBeMove}}
+\index{canBeMove@{canBeMove}!stratego::Game@{stratego::Game}}
+\doxysubsubsection{\texorpdfstring{canBeMove()}{canBeMove()}}
+{\footnotesize\ttfamily bool stratego\+::\+Game\+::can\+Be\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacestratego_aa06b5b555bc849993199885b46329582}{Direction}}}]{direction }\end{DoxyParamCaption}) const}
+
+
+
+can\+Be\+Move 
+
+check if the piece at the current pos can be moved to the new \mbox{\hyperlink{classstratego_1_1_position}{Position}} 
+\begin{DoxyParams}{Parameters}
+{\em direction} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolk 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_game_a31f37f87e0591bbe38f760e7162ce719}\label{classstratego_1_1_game_a31f37f87e0591bbe38f760e7162ce719}} 
+\index{stratego::Game@{stratego::Game}!canBeMoveForEclaireur@{canBeMoveForEclaireur}}
+\index{canBeMoveForEclaireur@{canBeMoveForEclaireur}!stratego::Game@{stratego::Game}}
+\doxysubsubsection{\texorpdfstring{canBeMoveForEclaireur()}{canBeMoveForEclaireur()}}
+{\footnotesize\ttfamily bool stratego\+::\+Game\+::can\+Be\+Move\+For\+Eclaireur (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacestratego_aa06b5b555bc849993199885b46329582}{Direction}}}]{direction,  }\item[{int}]{number\+Of\+Move }\end{DoxyParamCaption}) const}
+
+
+
+can\+Be\+Move\+For\+Eclaireur 
+
+Check if the eclaireur can be move with the number of move Return false if it find water or enemy during visit Otherwise return true
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Direction\+: direction to check move \\
+\hline
+{\em number\+Of\+Move} & int\+: number of move in the selected direction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_game_a877a6658d1f54914e7cbd8bc98ba0cc2}\label{classstratego_1_1_game_a877a6658d1f54914e7cbd8bc98ba0cc2}} 
+\index{stratego::Game@{stratego::Game}!canBeSelected@{canBeSelected}}
+\index{canBeSelected@{canBeSelected}!stratego::Game@{stratego::Game}}
+\doxysubsubsection{\texorpdfstring{canBeSelected()}{canBeSelected()}}
+{\footnotesize\ttfamily bool stratego\+::\+Game\+::can\+Be\+Selected (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstratego_1_1_position}{Position}}}]{position }\end{DoxyParamCaption}) const}
+
+
+
+can\+Be\+Selected 
+
+check if the piece at the given position can be selected 
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_game_a58d2328811b13827a3419924362927b2}\label{classstratego_1_1_game_a58d2328811b13827a3419924362927b2}} 
+\index{stratego::Game@{stratego::Game}!checkEnd@{checkEnd}}
+\index{checkEnd@{checkEnd}!stratego::Game@{stratego::Game}}
+\doxysubsubsection{\texorpdfstring{checkEnd()}{checkEnd()}}
+{\footnotesize\ttfamily bool stratego\+::\+Game\+::check\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+check\+End 
+
+check if the game is ended \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_game_a7316cbaa4f63419e15d0d6efd140bf55}\label{classstratego_1_1_game_a7316cbaa4f63419e15d0d6efd140bf55}} 
+\index{stratego::Game@{stratego::Game}!checkEndFlag@{checkEndFlag}}
+\index{checkEndFlag@{checkEndFlag}!stratego::Game@{stratego::Game}}
+\doxysubsubsection{\texorpdfstring{checkEndFlag()}{checkEndFlag()}}
+{\footnotesize\ttfamily bool stratego\+::\+Game\+::check\+End\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+check\+End 
+
+check if the game is ended \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_game_af1331afab5fbe93c3e82e401d548f6ba}\label{classstratego_1_1_game_af1331afab5fbe93c3e82e401d548f6ba}} 
+\index{stratego::Game@{stratego::Game}!getBoard@{getBoard}}
+\index{getBoard@{getBoard}!stratego::Game@{stratego::Game}}
+\doxysubsubsection{\texorpdfstring{getBoard()}{getBoard()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classstratego_1_1_board}{Board}} \& stratego\+::\+Game\+::get\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Board 
+
+getter \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classstratego_1_1_board}{Board}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_game_ad1ed3d3b4818e6850a3c9df11644562c}\label{classstratego_1_1_game_ad1ed3d3b4818e6850a3c9df11644562c}} 
+\index{stratego::Game@{stratego::Game}!getCurrentPosition@{getCurrentPosition}}
+\index{getCurrentPosition@{getCurrentPosition}!stratego::Game@{stratego::Game}}
+\doxysubsubsection{\texorpdfstring{getCurrentPosition()}{getCurrentPosition()}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{classstratego_1_1_position}{Position}} $>$ stratego\+::\+Game\+::get\+Current\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+Current\+Position 
+
+Getter for the current position
+
+\begin{DoxyReturn}{Returns}
+current position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_game_a7da30fa047de3b3c9d2f680fe8520874}\label{classstratego_1_1_game_a7da30fa047de3b3c9d2f680fe8520874}} 
+\index{stratego::Game@{stratego::Game}!getCurrentTeam@{getCurrentTeam}}
+\index{getCurrentTeam@{getCurrentTeam}!stratego::Game@{stratego::Game}}
+\doxysubsubsection{\texorpdfstring{getCurrentTeam()}{getCurrentTeam()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacestratego_a83d6fb949f3282c71b9bced562c7b9d2}{Team\+Color}} stratego\+::\+Game\+::get\+Current\+Team (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+Current\+Team 
+
+Getter for the current player turn
+
+\begin{DoxyReturn}{Returns}
+Team\+Color 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_game_a2a9e3c81455854e46edf2ae857299520}\label{classstratego_1_1_game_a2a9e3c81455854e46edf2ae857299520}} 
+\index{stratego::Game@{stratego::Game}!getNewPosition@{getNewPosition}}
+\index{getNewPosition@{getNewPosition}!stratego::Game@{stratego::Game}}
+\doxysubsubsection{\texorpdfstring{getNewPosition()}{getNewPosition()}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{classstratego_1_1_position}{Position}} $>$ stratego\+::\+Game\+::get\+New\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+New\+Position 
+
+Getter for the new \mbox{\hyperlink{classstratego_1_1_position}{Position}} selected
+
+\begin{DoxyReturn}{Returns}
+the new position selected 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_game_a24dc611e6c2c33da060e0244bf5f14dc}\label{classstratego_1_1_game_a24dc611e6c2c33da060e0244bf5f14dc}} 
+\index{stratego::Game@{stratego::Game}!getPiece@{getPiece}}
+\index{getPiece@{getPiece}!stratego::Game@{stratego::Game}}
+\doxysubsubsection{\texorpdfstring{getPiece()}{getPiece()}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{classstratego_1_1_piece}{Piece}} $>$ stratego\+::\+Game\+::get\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstratego_1_1_position}{Position}}}]{position }\end{DoxyParamCaption}) const}
+
+
+
+get\+Piece 
+
+Getter for a std\+::optional$<$\+Piece$>$ into the board at a specific position
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \mbox{\hyperlink{classstratego_1_1_position}{Position}} \+: \mbox{\hyperlink{classstratego_1_1_position}{Position}} that will be used \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::optional$<$\+Piece$>$ into the board 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_game_a097581d3f0d3819b11ce165ce884f9a9}\label{classstratego_1_1_game_a097581d3f0d3819b11ce165ce884f9a9}} 
+\index{stratego::Game@{stratego::Game}!getState@{getState}}
+\index{getState@{getState}!stratego::Game@{stratego::Game}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacestratego_a23af443ff4526ab41766f45a424981e0}{State}} stratego\+::\+Game\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+State 
+
+Getter of the current state
+
+\begin{DoxyReturn}{Returns}
+State 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_game_a637f399a7e43db85c96e4200e359e14c}\label{classstratego_1_1_game_a637f399a7e43db85c96e4200e359e14c}} 
+\index{stratego::Game@{stratego::Game}!getWinner@{getWinner}}
+\index{getWinner@{getWinner}!stratego::Game@{stratego::Game}}
+\doxysubsubsection{\texorpdfstring{getWinner()}{getWinner()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacestratego_a83d6fb949f3282c71b9bced562c7b9d2}{Team\+Color}} stratego\+::\+Game\+::get\+Winner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+Winner 
+
+return the winner of the game wooohoooo \begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_game_a114a6d7f6466f248377464bc78c23030}\label{classstratego_1_1_game_a114a6d7f6466f248377464bc78c23030}} 
+\index{stratego::Game@{stratego::Game}!isEnded@{isEnded}}
+\index{isEnded@{isEnded}!stratego::Game@{stratego::Game}}
+\doxysubsubsection{\texorpdfstring{isEnded()}{isEnded()}}
+{\footnotesize\ttfamily bool stratego\+::\+Game\+::is\+Ended (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+is\+Ended 
+
+getter if it is the end of the game \begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_game_aad80cb4fcdbb7643279fec3e1b34caf3}\label{classstratego_1_1_game_aad80cb4fcdbb7643279fec3e1b34caf3}} 
+\index{stratego::Game@{stratego::Game}!isInDebugMode@{isInDebugMode}}
+\index{isInDebugMode@{isInDebugMode}!stratego::Game@{stratego::Game}}
+\doxysubsubsection{\texorpdfstring{isInDebugMode()}{isInDebugMode()}}
+{\footnotesize\ttfamily bool stratego\+::\+Game\+::is\+In\+Debug\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+is\+In\+Debug\+Mode 
+
+getter for it is debug mode \begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_game_a1d963a3c3986a64b95f2b3894364ef08}\label{classstratego_1_1_game_a1d963a3c3986a64b95f2b3894364ef08}} 
+\index{stratego::Game@{stratego::Game}!movePiece@{movePiece}}
+\index{movePiece@{movePiece}!stratego::Game@{stratego::Game}}
+\doxysubsubsection{\texorpdfstring{movePiece()}{movePiece()}}
+{\footnotesize\ttfamily void stratego\+::\+Game\+::move\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacestratego_aa06b5b555bc849993199885b46329582}{Direction}}}]{direction }\end{DoxyParamCaption})}
+
+
+
+set\+New\+Position 
+
+setter for the new position 
+\begin{DoxyParams}{Parameters}
+{\em direction} & Direction\+: the direction \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classstratego_1_1_game_a4430e2a78166637879d93fe31f5beca6}\label{classstratego_1_1_game_a4430e2a78166637879d93fe31f5beca6}} 
+\index{stratego::Game@{stratego::Game}!moveSpecialPiece@{moveSpecialPiece}}
+\index{moveSpecialPiece@{moveSpecialPiece}!stratego::Game@{stratego::Game}}
+\doxysubsubsection{\texorpdfstring{moveSpecialPiece()}{moveSpecialPiece()}}
+{\footnotesize\ttfamily void stratego\+::\+Game\+::move\+Special\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacestratego_aa06b5b555bc849993199885b46329582}{Direction}}}]{direction,  }\item[{int}]{number\+Of\+Move }\end{DoxyParamCaption})}
+
+
+
+set\+New\+Position\+Eclaireur 
+
+Setter the new position for a specific case with the number of move
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Direction\+: direction to move \\
+\hline
+{\em number\+Of\+Move} & int\+: number of move \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classstratego_1_1_game_a3fca7c8fa71a4939d00a1952879fe9d8}\label{classstratego_1_1_game_a3fca7c8fa71a4939d00a1952879fe9d8}} 
+\index{stratego::Game@{stratego::Game}!play@{play}}
+\index{play@{play}!stratego::Game@{stratego::Game}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void stratego\+::\+Game\+::play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+play 
+
+Represent the loop of the game ex \+: turn of player x, move, check end, turn of play x2... \mbox{\Hypertarget{classstratego_1_1_game_a5e92cf46b74c5d2803a66764af40f304}\label{classstratego_1_1_game_a5e92cf46b74c5d2803a66764af40f304}} 
+\index{stratego::Game@{stratego::Game}!reverseDebugMode@{reverseDebugMode}}
+\index{reverseDebugMode@{reverseDebugMode}!stratego::Game@{stratego::Game}}
+\doxysubsubsection{\texorpdfstring{reverseDebugMode()}{reverseDebugMode()}}
+{\footnotesize\ttfamily void stratego\+::\+Game\+::reverse\+Debug\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+reverse\+Debug\+Mode 
+
+Setter for debug mode. It set the inverse of current debug mode option \mbox{\Hypertarget{classstratego_1_1_game_a6f59267bbdb434cdcd7b514546670676}\label{classstratego_1_1_game_a6f59267bbdb434cdcd7b514546670676}} 
+\index{stratego::Game@{stratego::Game}!selectPiece@{selectPiece}}
+\index{selectPiece@{selectPiece}!stratego::Game@{stratego::Game}}
+\doxysubsubsection{\texorpdfstring{selectPiece()}{selectPiece()}}
+{\footnotesize\ttfamily void stratego\+::\+Game\+::select\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstratego_1_1_position}{Position}}}]{position }\end{DoxyParamCaption})}
+
+
+
+set\+Current\+Position 
+
+setter for the current pos 
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classstratego_1_1_game_a3e8743969f8b6d11bd8d621a80d6462c}\label{classstratego_1_1_game_a3e8743969f8b6d11bd8d621a80d6462c}} 
+\index{stratego::Game@{stratego::Game}!start@{start}}
+\index{start@{start}!stratego::Game@{stratego::Game}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void stratego\+::\+Game\+::start (\begin{DoxyParamCaption}\item[{int}]{nb\+File }\end{DoxyParamCaption})}
+
+
+
+start 
+
+call the method initializeboardpiece of the board 
+\begin{DoxyParams}{Parameters}
+{\em nb\+File} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game.\+h\item 
+model.\+h\item 
+game.\+cpp\end{DoxyCompactItemize}

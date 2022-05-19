@@ -1,0 +1,39 @@
+\hypertarget{model_8h_source}{}\doxysection{model.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MODEL\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MODEL\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}Board.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}TeamColor.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}State.h"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacestratego}{stratego}} \{}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12     \textcolor{keyword}{class }Game\{}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14         \textcolor{keywordtype}{bool} is\_ended\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{15         \textcolor{keywordtype}{bool} is\_debug\_mode\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{16         \mbox{\hyperlink{namespacestratego_a83d6fb949f3282c71b9bced562c7b9d2}{TeamColor}} currentTeam\_ = TeamColor::RED;}
+\DoxyCodeLine{17         Board board\_;}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \textcolor{keyword}{public}:}
+\DoxyCodeLine{20         \mbox{\hyperlink{classstratego_1_1_game_ac560e9ea4b49d1d81159a15b02bc0910}{Game}}();}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classstratego_1_1_game_a58d2328811b13827a3419924362927b2}{checkEnd}}();}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24         \textcolor{keywordtype}{void} \mbox{\hyperlink{classstratego_1_1_game_a3fca7c8fa71a4939d00a1952879fe9d8}{play}}();}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26         Board \mbox{\hyperlink{classstratego_1_1_game_af1331afab5fbe93c3e82e401d548f6ba}{getBoard}}();}
+\DoxyCodeLine{27     \textcolor{keyword}{private}:}
+\DoxyCodeLine{28         \textcolor{keywordtype}{void} initializeStartedGame(std::string red, std::string blue);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// MODEL\_H}}
+
+\end{DoxyCode}

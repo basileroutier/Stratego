@@ -1,0 +1,171 @@
+\hypertarget{classstratego_1_1_position}{}\doxysection{stratego\+::Position Class Reference}
+\label{classstratego_1_1_position}\index{stratego::Position@{stratego::Position}}
+
+
+The \mbox{\hyperlink{classstratego_1_1_position}{Position}} class.  
+
+
+
+
+{\ttfamily \#include $<$position.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classstratego_1_1_position_aa41143aa97cb1c6f787c55a9f98f3db6}\label{classstratego_1_1_position_aa41143aa97cb1c6f787c55a9f98f3db6}} 
+{\bfseries Position} (int \mbox{\hyperlink{classstratego_1_1_position_a4fdc487c25164876eb1c1de7367212e6}{row}}, int \mbox{\hyperlink{classstratego_1_1_position_a14da3ff6291851b84dbfb175c1f703f1}{column}})
+\item 
+\mbox{\Hypertarget{classstratego_1_1_position_adf2a9c501cd491ca4f9985b1db15b91c}\label{classstratego_1_1_position_adf2a9c501cd491ca4f9985b1db15b91c}} 
+{\bfseries Position} (\mbox{\hyperlink{namespacestratego_aa06b5b555bc849993199885b46329582}{Direction}} dir)
+\item 
+int \mbox{\hyperlink{classstratego_1_1_position_a4fdc487c25164876eb1c1de7367212e6}{row}} () const
+\begin{DoxyCompactList}\small\item\em row \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classstratego_1_1_position_a14da3ff6291851b84dbfb175c1f703f1}{column}} () const
+\begin{DoxyCompactList}\small\item\em column \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstratego_1_1_position_af6bbd45b96529a7d78143b9c51f3d75a}{set\+Row}} (int \mbox{\hyperlink{classstratego_1_1_position_a4fdc487c25164876eb1c1de7367212e6}{row}})
+\begin{DoxyCompactList}\small\item\em set\+Row \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstratego_1_1_position_a892b01ac106eaba63e577b507a0a22af}{set\+Column}} (int \mbox{\hyperlink{classstratego_1_1_position_a14da3ff6291851b84dbfb175c1f703f1}{column}})
+\begin{DoxyCompactList}\small\item\em set\+Column \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstratego_1_1_position_ae2b6d4190d3f0651598813539f655bcc}{move}} (int \mbox{\hyperlink{classstratego_1_1_position_a4fdc487c25164876eb1c1de7367212e6}{row}}, int \mbox{\hyperlink{classstratego_1_1_position_a14da3ff6291851b84dbfb175c1f703f1}{column}})
+\begin{DoxyCompactList}\small\item\em move \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classstratego_1_1_position_a17af16a0ad36ac3c22556f7486f4b2f4}{operator==}} (const \mbox{\hyperlink{classstratego_1_1_position}{Position}} \&other) const
+\begin{DoxyCompactList}\small\item\em operator == \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classstratego_1_1_position_ac4df06aa6b49cfbab621b8fcb8d24805}{operator!=}} (const \mbox{\hyperlink{classstratego_1_1_position}{Position}} \&other) const
+\begin{DoxyCompactList}\small\item\em operator != \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classstratego_1_1_position}{Position}} class. 
+
+Represent a \mbox{\hyperlink{classstratego_1_1_position}{Position}} into/for something 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classstratego_1_1_position_a14da3ff6291851b84dbfb175c1f703f1}\label{classstratego_1_1_position_a14da3ff6291851b84dbfb175c1f703f1}} 
+\index{stratego::Position@{stratego::Position}!column@{column}}
+\index{column@{column}!stratego::Position@{stratego::Position}}
+\doxysubsubsection{\texorpdfstring{column()}{column()}}
+{\footnotesize\ttfamily int stratego\+::\+Position\+::column (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+column 
+
+Getter for the column
+
+\begin{DoxyReturn}{Returns}
+the column 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_position_ae2b6d4190d3f0651598813539f655bcc}\label{classstratego_1_1_position_ae2b6d4190d3f0651598813539f655bcc}} 
+\index{stratego::Position@{stratego::Position}!move@{move}}
+\index{move@{move}!stratego::Position@{stratego::Position}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void stratego\+::\+Position\+::move (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column }\end{DoxyParamCaption})}
+
+
+
+move 
+
+Move the current row and column and Addition row with the old one Same for column
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & int\+: new row position \\
+\hline
+{\em column} & int\+: new column position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classstratego_1_1_position_ac4df06aa6b49cfbab621b8fcb8d24805}\label{classstratego_1_1_position_ac4df06aa6b49cfbab621b8fcb8d24805}} 
+\index{stratego::Position@{stratego::Position}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!stratego::Position@{stratego::Position}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool stratego\+::\+Position\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classstratego_1_1_position}{Position}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+operator != 
+
+Operator to check if a piece not equal to another Return true if NOT equal Else false
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \mbox{\hyperlink{classstratego_1_1_position}{Position}} \+: other postion to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if not equal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_position_a17af16a0ad36ac3c22556f7486f4b2f4}\label{classstratego_1_1_position_a17af16a0ad36ac3c22556f7486f4b2f4}} 
+\index{stratego::Position@{stratego::Position}!operator==@{operator==}}
+\index{operator==@{operator==}!stratego::Position@{stratego::Position}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool stratego\+::\+Position\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classstratego_1_1_position}{Position}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+operator == 
+
+Operator to check if a \mbox{\hyperlink{classstratego_1_1_position}{Position}} equal to another Return true if equal Else false
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \mbox{\hyperlink{classstratego_1_1_position}{Position}}\+: other position to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if equal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_position_a4fdc487c25164876eb1c1de7367212e6}\label{classstratego_1_1_position_a4fdc487c25164876eb1c1de7367212e6}} 
+\index{stratego::Position@{stratego::Position}!row@{row}}
+\index{row@{row}!stratego::Position@{stratego::Position}}
+\doxysubsubsection{\texorpdfstring{row()}{row()}}
+{\footnotesize\ttfamily int stratego\+::\+Position\+::row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+row 
+
+Getter for the row
+
+\begin{DoxyReturn}{Returns}
+the row 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_position_a892b01ac106eaba63e577b507a0a22af}\label{classstratego_1_1_position_a892b01ac106eaba63e577b507a0a22af}} 
+\index{stratego::Position@{stratego::Position}!setColumn@{setColumn}}
+\index{setColumn@{setColumn}!stratego::Position@{stratego::Position}}
+\doxysubsubsection{\texorpdfstring{setColumn()}{setColumn()}}
+{\footnotesize\ttfamily void stratego\+::\+Position\+::set\+Column (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption})}
+
+
+
+set\+Column 
+
+Setter for the column with the new value
+
+
+\begin{DoxyParams}{Parameters}
+{\em column} & int\+: new column position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classstratego_1_1_position_af6bbd45b96529a7d78143b9c51f3d75a}\label{classstratego_1_1_position_af6bbd45b96529a7d78143b9c51f3d75a}} 
+\index{stratego::Position@{stratego::Position}!setRow@{setRow}}
+\index{setRow@{setRow}!stratego::Position@{stratego::Position}}
+\doxysubsubsection{\texorpdfstring{setRow()}{setRow()}}
+{\footnotesize\ttfamily void stratego\+::\+Position\+::set\+Row (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption})}
+
+
+
+set\+Row 
+
+Setter for the row with the new value
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & int\+: new row position \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+position.\+h\item 
+position.\+cpp\end{DoxyCompactItemize}

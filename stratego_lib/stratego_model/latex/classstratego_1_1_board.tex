@@ -1,0 +1,425 @@
+\hypertarget{classstratego_1_1_board}{}\doxysection{stratego\+::Board Class Reference}
+\label{classstratego_1_1_board}\index{stratego::Board@{stratego::Board}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classstratego_1_1_board_a580d5774daa5c2fa87cc65ab44407c85}{Board}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classstratego_1_1_board}{Board}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classstratego_1_1_board_ac754300e06c728279f3fc2415b63f955}{Board}} (std\+::array$<$ std\+::string, 2 $>$ file)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classstratego_1_1_board}{Board}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstratego_1_1_board_addf7c33278b2d9eb186d5a3ebed8060d}{initialize\+Board\+Player}} (int number\+Of\+File)
+\begin{DoxyCompactList}\small\item\em initialize\+Started\+Board \end{DoxyCompactList}\item 
+std\+::array$<$ std\+::array$<$ std\+::optional$<$ \mbox{\hyperlink{classstratego_1_1_case}{Case}} $>$, \mbox{\hyperlink{classstratego_1_1_board_a1abf6c4c66c9615fc4dd626651646c3d}{column\+\_\+}} $>$, \mbox{\hyperlink{classstratego_1_1_board_a586e16e241602545c7f56c1a1219d1b2}{row\+\_\+}} $>$ const \& \mbox{\hyperlink{classstratego_1_1_board_acd7b26999011a0d5294bb3d4bf3a3e86}{board}} () const
+\begin{DoxyCompactList}\small\item\em board \end{DoxyCompactList}\item 
+std\+::optional$<$ \mbox{\hyperlink{classstratego_1_1_case}{Case}} $>$ \mbox{\hyperlink{classstratego_1_1_board_ac83e3898c9584731815fc3be243cd58e}{get\+Case}} (\mbox{\hyperlink{classstratego_1_1_position}{Position}} pos) const
+\begin{DoxyCompactList}\small\item\em get\+Case \end{DoxyCompactList}\item 
+std\+::optional$<$ \mbox{\hyperlink{classstratego_1_1_piece}{Piece}} $>$ \mbox{\hyperlink{classstratego_1_1_board_a535fa87f88d612d0266814051b8b1016}{get\+Piece}} (\mbox{\hyperlink{classstratego_1_1_position}{Position}} pos) const
+\begin{DoxyCompactList}\small\item\em get\+Piece \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacestratego_a06ac02db02f93bd0ec9ebff7b7bcb16f}{Value\+Piece}} \mbox{\hyperlink{classstratego_1_1_board_a5b1ea0d1a5809b48bde0ae46880b7a9a}{get\+Value\+Piece}} (\mbox{\hyperlink{classstratego_1_1_position}{Position}} pos) const
+\begin{DoxyCompactList}\small\item\em get\+Value\+Piece \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classstratego_1_1_board_ac429626c40fb6ea44288e9829ddae769}{is\+Case\+Piece}} (\mbox{\hyperlink{classstratego_1_1_position}{Position}} pos) const
+\begin{DoxyCompactList}\small\item\em is\+Case\+Piece \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classstratego_1_1_board_a3c5812882f3320acf854082fe888b155}{is\+Case\+Water}} (\mbox{\hyperlink{classstratego_1_1_position}{Position}} pos) const
+\begin{DoxyCompactList}\small\item\em is\+Case\+Piece \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classstratego_1_1_board_ab59a96d781ef673ace5f087907987ad2}{is\+Case\+Ground}} (\mbox{\hyperlink{classstratego_1_1_position}{Position}} pos) const
+\begin{DoxyCompactList}\small\item\em is\+Case\+Piece \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacestratego_ac763ed7dd0527f2a3a4871e29de17fc3}{Case\+Type}} \mbox{\hyperlink{classstratego_1_1_board_acfab0eb58f16aa25149a447dd5dcb994}{get\+Type\+Case}} (\mbox{\hyperlink{classstratego_1_1_position}{Position}} pos) const
+\begin{DoxyCompactList}\small\item\em is\+Case\+Piece \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstratego_1_1_board_a849e6c3ba9adbe8fe501bcc732d570e4}{move\+Piece}} (\mbox{\hyperlink{classstratego_1_1_position}{Position}} current\+Pos, \mbox{\hyperlink{classstratego_1_1_position}{Position}} new\+Pos)
+\begin{DoxyCompactList}\small\item\em move\+Piece \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classstratego_1_1_board_a59d5379a42afd5ee5d0c6be871766795}{is\+Combat}} (\mbox{\hyperlink{classstratego_1_1_position}{Position}} position, \mbox{\hyperlink{classstratego_1_1_position}{Position}} new\+Position) const
+\begin{DoxyCompactList}\small\item\em is\+Combat \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classstratego_1_1_board_ab220f0824af49f421ca62696cac8f83d}{is\+Same\+Team}} (\mbox{\hyperlink{classstratego_1_1_position}{Position}} position\+Piece, \mbox{\hyperlink{classstratego_1_1_position}{Position}} new\+Position) const
+\begin{DoxyCompactList}\small\item\em is\+Same\+Team \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classstratego_1_1_board_aee3db3623169f938232b115f0f8ec6ae}{is\+Same\+Team}} (\mbox{\hyperlink{classstratego_1_1_position}{Position}} position\+Piece, \mbox{\hyperlink{namespacestratego_a83d6fb949f3282c71b9bced562c7b9d2}{Team\+Color}} team) const
+\begin{DoxyCompactList}\small\item\em is\+Same\+Team \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classstratego_1_1_board_a5cc6386068535833087731421f4be51a}{is\+Inside}} (\mbox{\hyperlink{classstratego_1_1_position}{Position}} pos) const
+\begin{DoxyCompactList}\small\item\em is\+Inside \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classstratego_1_1_board_ab8dccea26618d34fca0292a1ba4ac2d3}{can\+Be\+Put}} (\mbox{\hyperlink{classstratego_1_1_position}{Position}} current\+Pos, \mbox{\hyperlink{classstratego_1_1_position}{Position}} new\+Pos) const
+\begin{DoxyCompactList}\small\item\em can\+Be\+Put \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classstratego_1_1_position}{Position}} \mbox{\hyperlink{classstratego_1_1_board_a29ae9bf9de0140ff92444587232cba56}{new\+Position\+Direction}} (\mbox{\hyperlink{classstratego_1_1_position}{Position}} \&pos, \mbox{\hyperlink{namespacestratego_aa06b5b555bc849993199885b46329582}{Direction}} d) const
+\begin{DoxyCompactList}\small\item\em new\+Position\+Direction \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classstratego_1_1_board_a6ba71d87b1c9df534c882139283655a3}{$\sim$\+Board}} ()=default
+\item 
+void \mbox{\hyperlink{classstratego_1_1_board_a246735654668d4006e0a7139d4e9f221}{combat}} (\mbox{\hyperlink{classstratego_1_1_position}{Position}} current\+Pos, \mbox{\hyperlink{classstratego_1_1_position}{Position}} new\+Pos)
+\begin{DoxyCompactList}\small\item\em combat \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const size\+\_\+t \mbox{\hyperlink{classstratego_1_1_board_a586e16e241602545c7f56c1a1219d1b2}{row\+\_\+}} =10
+\begin{DoxyCompactList}\small\item\em row\+\_\+ \end{DoxyCompactList}\item 
+static const size\+\_\+t \mbox{\hyperlink{classstratego_1_1_board_a1abf6c4c66c9615fc4dd626651646c3d}{column\+\_\+}} =10
+\begin{DoxyCompactList}\small\item\em column\+\_\+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstratego_1_1_board_a580d5774daa5c2fa87cc65ab44407c85}\label{classstratego_1_1_board_a580d5774daa5c2fa87cc65ab44407c85}} 
+\index{stratego::Board@{stratego::Board}!Board@{Board}}
+\index{Board@{Board}!stratego::Board@{stratego::Board}}
+\doxysubsubsection{\texorpdfstring{Board()}{Board()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily stratego\+::\+Board\+::\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classstratego_1_1_board}{Board}}. 
+
+Constructor \mbox{\Hypertarget{classstratego_1_1_board_ac754300e06c728279f3fc2415b63f955}\label{classstratego_1_1_board_ac754300e06c728279f3fc2415b63f955}} 
+\index{stratego::Board@{stratego::Board}!Board@{Board}}
+\index{Board@{Board}!stratego::Board@{stratego::Board}}
+\doxysubsubsection{\texorpdfstring{Board()}{Board()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily stratego\+::\+Board\+::\+Board (\begin{DoxyParamCaption}\item[{std\+::array$<$ std\+::string, 2 $>$}]{file }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classstratego_1_1_board}{Board}}. 
+
+DO NOT USE, ONLY FOR TEST
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classstratego_1_1_board_a6ba71d87b1c9df534c882139283655a3}\label{classstratego_1_1_board_a6ba71d87b1c9df534c882139283655a3}} 
+\index{stratego::Board@{stratego::Board}!````~Board@{$\sim$Board}}
+\index{````~Board@{$\sim$Board}!stratego::Board@{stratego::Board}}
+\doxysubsubsection{\texorpdfstring{$\sim$Board()}{~Board()}}
+{\footnotesize\ttfamily stratego\+::\+Board\+::$\sim$\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classstratego_1_1_board_acd7b26999011a0d5294bb3d4bf3a3e86}\label{classstratego_1_1_board_acd7b26999011a0d5294bb3d4bf3a3e86}} 
+\index{stratego::Board@{stratego::Board}!board@{board}}
+\index{board@{board}!stratego::Board@{stratego::Board}}
+\doxysubsubsection{\texorpdfstring{board()}{board()}}
+{\footnotesize\ttfamily std\+::array$<$ std\+::array$<$ std\+::optional$<$ \mbox{\hyperlink{classstratego_1_1_case}{Case}} $>$, \mbox{\hyperlink{classstratego_1_1_board_a1abf6c4c66c9615fc4dd626651646c3d}{Board\+::column\+\_\+}} $>$, \mbox{\hyperlink{classstratego_1_1_board_a586e16e241602545c7f56c1a1219d1b2}{Board\+::row\+\_\+}} $>$ const  \& stratego\+::\+Board\+::board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+board 
+
+getter for the 2D array \begin{DoxyReturn}{Returns}
+std\+::array\texorpdfstring{$<$}{<}std\+::array$<$\+Case$\ast$, column\+\_\+$>$,row\+\_\+\texorpdfstring{$>$}{>} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_board_ab8dccea26618d34fca0292a1ba4ac2d3}\label{classstratego_1_1_board_ab8dccea26618d34fca0292a1ba4ac2d3}} 
+\index{stratego::Board@{stratego::Board}!canBePut@{canBePut}}
+\index{canBePut@{canBePut}!stratego::Board@{stratego::Board}}
+\doxysubsubsection{\texorpdfstring{canBePut()}{canBePut()}}
+{\footnotesize\ttfamily bool stratego\+::\+Board\+::can\+Be\+Put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstratego_1_1_position}{Position}}}]{current\+Pos,  }\item[{\mbox{\hyperlink{classstratego_1_1_position}{Position}}}]{new\+Pos }\end{DoxyParamCaption}) const}
+
+
+
+can\+Be\+Put 
+
+Check if we can put the case of current\+Pos at the new\+Pos 
+\begin{DoxyParams}{Parameters}
+{\em current\+Pos} & \mbox{\hyperlink{classstratego_1_1_position}{Position}}\+: current position in the board \\
+\hline
+{\em new\+Pos} & \mbox{\hyperlink{classstratego_1_1_position}{Position}}\+: new position in the board \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_board_a246735654668d4006e0a7139d4e9f221}\label{classstratego_1_1_board_a246735654668d4006e0a7139d4e9f221}} 
+\index{stratego::Board@{stratego::Board}!combat@{combat}}
+\index{combat@{combat}!stratego::Board@{stratego::Board}}
+\doxysubsubsection{\texorpdfstring{combat()}{combat()}}
+{\footnotesize\ttfamily void stratego\+::\+Board\+::combat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstratego_1_1_position}{Position}}}]{current\+Pos,  }\item[{\mbox{\hyperlink{classstratego_1_1_position}{Position}}}]{new\+Pos }\end{DoxyParamCaption})}
+
+
+
+combat 
+
+The fight between the 2 pieces at the given position. If the piece at the given pos beat the piece at the new pos then the piece will be move otherwise the piece will be remove and replace with ground 
+\begin{DoxyParams}{Parameters}
+{\em current\+Pos} & \mbox{\hyperlink{classstratego_1_1_position}{Position}}\+: current position in the board \\
+\hline
+{\em new\+Pos} & \mbox{\hyperlink{classstratego_1_1_position}{Position}}\+: new position in the board \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classstratego_1_1_board_ac83e3898c9584731815fc3be243cd58e}\label{classstratego_1_1_board_ac83e3898c9584731815fc3be243cd58e}} 
+\index{stratego::Board@{stratego::Board}!getCase@{getCase}}
+\index{getCase@{getCase}!stratego::Board@{stratego::Board}}
+\doxysubsubsection{\texorpdfstring{getCase()}{getCase()}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{classstratego_1_1_case}{Case}} $>$ stratego\+::\+Board\+::get\+Case (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstratego_1_1_position}{Position}}}]{pos }\end{DoxyParamCaption}) const}
+
+
+
+get\+Case 
+
+getter for a \mbox{\hyperlink{classstratego_1_1_case}{Case}} at a given position 
+\begin{DoxyParams}{Parameters}
+{\em pos} & \mbox{\hyperlink{classstratego_1_1_position}{Position}}\+: position in the board \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::optional$<$\+Case$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_board_a535fa87f88d612d0266814051b8b1016}\label{classstratego_1_1_board_a535fa87f88d612d0266814051b8b1016}} 
+\index{stratego::Board@{stratego::Board}!getPiece@{getPiece}}
+\index{getPiece@{getPiece}!stratego::Board@{stratego::Board}}
+\doxysubsubsection{\texorpdfstring{getPiece()}{getPiece()}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{classstratego_1_1_piece}{Piece}} $>$ stratego\+::\+Board\+::get\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstratego_1_1_position}{Position}}}]{pos }\end{DoxyParamCaption}) const}
+
+
+
+get\+Piece 
+
+Getter for a piece at a given position
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & \mbox{\hyperlink{classstratego_1_1_position}{Position}}\+: position in the board \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a piece 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_board_acfab0eb58f16aa25149a447dd5dcb994}\label{classstratego_1_1_board_acfab0eb58f16aa25149a447dd5dcb994}} 
+\index{stratego::Board@{stratego::Board}!getTypeCase@{getTypeCase}}
+\index{getTypeCase@{getTypeCase}!stratego::Board@{stratego::Board}}
+\doxysubsubsection{\texorpdfstring{getTypeCase()}{getTypeCase()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacestratego_ac763ed7dd0527f2a3a4871e29de17fc3}{Case\+Type}} stratego\+::\+Board\+::get\+Type\+Case (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstratego_1_1_position}{Position}}}]{pos }\end{DoxyParamCaption}) const}
+
+
+
+is\+Case\+Piece 
+
+Return the type of the case at the given position. 
+\begin{DoxyParams}{Parameters}
+{\em pos} & \mbox{\hyperlink{classstratego_1_1_position}{Position}}\+: position in the board \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_board_a5b1ea0d1a5809b48bde0ae46880b7a9a}\label{classstratego_1_1_board_a5b1ea0d1a5809b48bde0ae46880b7a9a}} 
+\index{stratego::Board@{stratego::Board}!getValuePiece@{getValuePiece}}
+\index{getValuePiece@{getValuePiece}!stratego::Board@{stratego::Board}}
+\doxysubsubsection{\texorpdfstring{getValuePiece()}{getValuePiece()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacestratego_a06ac02db02f93bd0ec9ebff7b7bcb16f}{Value\+Piece}} stratego\+::\+Board\+::get\+Value\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstratego_1_1_position}{Position}}}]{pos }\end{DoxyParamCaption}) const}
+
+
+
+get\+Value\+Piece 
+
+Getter for the value of a piece at a given position
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & \mbox{\hyperlink{classstratego_1_1_position}{Position}}\+: position in the board \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_board_addf7c33278b2d9eb186d5a3ebed8060d}\label{classstratego_1_1_board_addf7c33278b2d9eb186d5a3ebed8060d}} 
+\index{stratego::Board@{stratego::Board}!initializeBoardPlayer@{initializeBoardPlayer}}
+\index{initializeBoardPlayer@{initializeBoardPlayer}!stratego::Board@{stratego::Board}}
+\doxysubsubsection{\texorpdfstring{initializeBoardPlayer()}{initializeBoardPlayer()}}
+{\footnotesize\ttfamily void stratego\+::\+Board\+::initialize\+Board\+Player (\begin{DoxyParamCaption}\item[{int}]{number\+Of\+File }\end{DoxyParamCaption})}
+
+
+
+initialize\+Started\+Board 
+
+Read the file that contains the piece and put them in the board. \mbox{\Hypertarget{classstratego_1_1_board_ab59a96d781ef673ace5f087907987ad2}\label{classstratego_1_1_board_ab59a96d781ef673ace5f087907987ad2}} 
+\index{stratego::Board@{stratego::Board}!isCaseGround@{isCaseGround}}
+\index{isCaseGround@{isCaseGround}!stratego::Board@{stratego::Board}}
+\doxysubsubsection{\texorpdfstring{isCaseGround()}{isCaseGround()}}
+{\footnotesize\ttfamily bool stratego\+::\+Board\+::is\+Case\+Ground (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstratego_1_1_position}{Position}}}]{pos }\end{DoxyParamCaption}) const}
+
+
+
+is\+Case\+Piece 
+
+Check if the case at the given position is water 
+\begin{DoxyParams}{Parameters}
+{\em pos} & \mbox{\hyperlink{classstratego_1_1_position}{Position}}\+: position in the board \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_board_ac429626c40fb6ea44288e9829ddae769}\label{classstratego_1_1_board_ac429626c40fb6ea44288e9829ddae769}} 
+\index{stratego::Board@{stratego::Board}!isCasePiece@{isCasePiece}}
+\index{isCasePiece@{isCasePiece}!stratego::Board@{stratego::Board}}
+\doxysubsubsection{\texorpdfstring{isCasePiece()}{isCasePiece()}}
+{\footnotesize\ttfamily bool stratego\+::\+Board\+::is\+Case\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstratego_1_1_position}{Position}}}]{pos }\end{DoxyParamCaption}) const}
+
+
+
+is\+Case\+Piece 
+
+Check if the case at the given position is a piece 
+\begin{DoxyParams}{Parameters}
+{\em pos} & \mbox{\hyperlink{classstratego_1_1_position}{Position}}\+: position in the board \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_board_a3c5812882f3320acf854082fe888b155}\label{classstratego_1_1_board_a3c5812882f3320acf854082fe888b155}} 
+\index{stratego::Board@{stratego::Board}!isCaseWater@{isCaseWater}}
+\index{isCaseWater@{isCaseWater}!stratego::Board@{stratego::Board}}
+\doxysubsubsection{\texorpdfstring{isCaseWater()}{isCaseWater()}}
+{\footnotesize\ttfamily bool stratego\+::\+Board\+::is\+Case\+Water (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstratego_1_1_position}{Position}}}]{pos }\end{DoxyParamCaption}) const}
+
+
+
+is\+Case\+Piece 
+
+Check if the case at the given position is water 
+\begin{DoxyParams}{Parameters}
+{\em pos} & \mbox{\hyperlink{classstratego_1_1_position}{Position}}\+: position in the board \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_board_a59d5379a42afd5ee5d0c6be871766795}\label{classstratego_1_1_board_a59d5379a42afd5ee5d0c6be871766795}} 
+\index{stratego::Board@{stratego::Board}!isCombat@{isCombat}}
+\index{isCombat@{isCombat}!stratego::Board@{stratego::Board}}
+\doxysubsubsection{\texorpdfstring{isCombat()}{isCombat()}}
+{\footnotesize\ttfamily bool stratego\+::\+Board\+::is\+Combat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstratego_1_1_position}{Position}}}]{position,  }\item[{\mbox{\hyperlink{classstratego_1_1_position}{Position}}}]{new\+Position }\end{DoxyParamCaption}) const}
+
+
+
+is\+Combat 
+
+Check if the new 
+\begin{DoxyParams}{Parameters}
+{\em position\+Piece} & \mbox{\hyperlink{classstratego_1_1_position}{Position}}\+: current position in the board \\
+\hline
+{\em new\+Position} & \mbox{\hyperlink{classstratego_1_1_position}{Position}}\+: new position in the board \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_board_a5cc6386068535833087731421f4be51a}\label{classstratego_1_1_board_a5cc6386068535833087731421f4be51a}} 
+\index{stratego::Board@{stratego::Board}!isInside@{isInside}}
+\index{isInside@{isInside}!stratego::Board@{stratego::Board}}
+\doxysubsubsection{\texorpdfstring{isInside()}{isInside()}}
+{\footnotesize\ttfamily bool stratego\+::\+Board\+::is\+Inside (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstratego_1_1_position}{Position}}}]{pos }\end{DoxyParamCaption}) const}
+
+
+
+is\+Inside 
+
+Check if the position given is inside the board 
+\begin{DoxyParams}{Parameters}
+{\em pos} & \mbox{\hyperlink{classstratego_1_1_position}{Position}}\+: position in the board \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_board_ab220f0824af49f421ca62696cac8f83d}\label{classstratego_1_1_board_ab220f0824af49f421ca62696cac8f83d}} 
+\index{stratego::Board@{stratego::Board}!isSameTeam@{isSameTeam}}
+\index{isSameTeam@{isSameTeam}!stratego::Board@{stratego::Board}}
+\doxysubsubsection{\texorpdfstring{isSameTeam()}{isSameTeam()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool stratego\+::\+Board\+::is\+Same\+Team (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstratego_1_1_position}{Position}}}]{position\+Piece,  }\item[{\mbox{\hyperlink{classstratego_1_1_position}{Position}}}]{new\+Position }\end{DoxyParamCaption}) const}
+
+
+
+is\+Same\+Team 
+
+Check if the pieces at the given positions are from the same team. 
+\begin{DoxyParams}{Parameters}
+{\em position\+Piece} & \mbox{\hyperlink{classstratego_1_1_position}{Position}}\+: current position in the board \\
+\hline
+{\em new\+Position} & \mbox{\hyperlink{classstratego_1_1_position}{Position}}\+: new position in the board \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_board_aee3db3623169f938232b115f0f8ec6ae}\label{classstratego_1_1_board_aee3db3623169f938232b115f0f8ec6ae}} 
+\index{stratego::Board@{stratego::Board}!isSameTeam@{isSameTeam}}
+\index{isSameTeam@{isSameTeam}!stratego::Board@{stratego::Board}}
+\doxysubsubsection{\texorpdfstring{isSameTeam()}{isSameTeam()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool stratego\+::\+Board\+::is\+Same\+Team (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstratego_1_1_position}{Position}}}]{position\+Piece,  }\item[{\mbox{\hyperlink{namespacestratego_a83d6fb949f3282c71b9bced562c7b9d2}{Team\+Color}}}]{team }\end{DoxyParamCaption}) const}
+
+
+
+is\+Same\+Team 
+
+Check if the case at the given position is from the same team. 
+\begin{DoxyParams}{Parameters}
+{\em position\+Piece} & \mbox{\hyperlink{classstratego_1_1_position}{Position}}\+: position in the board \\
+\hline
+{\em team} & Team\+Color \+: the other team \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_board_a849e6c3ba9adbe8fe501bcc732d570e4}\label{classstratego_1_1_board_a849e6c3ba9adbe8fe501bcc732d570e4}} 
+\index{stratego::Board@{stratego::Board}!movePiece@{movePiece}}
+\index{movePiece@{movePiece}!stratego::Board@{stratego::Board}}
+\doxysubsubsection{\texorpdfstring{movePiece()}{movePiece()}}
+{\footnotesize\ttfamily void stratego\+::\+Board\+::move\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstratego_1_1_position}{Position}}}]{current\+Pos,  }\item[{\mbox{\hyperlink{classstratego_1_1_position}{Position}}}]{new\+Pos }\end{DoxyParamCaption})}
+
+
+
+move\+Piece 
+
+Move the piece at the given position to the other position 
+\begin{DoxyParams}{Parameters}
+{\em current\+Pos} & \mbox{\hyperlink{classstratego_1_1_position}{Position}}\+: current position in the board \\
+\hline
+{\em new\+Pos} & \mbox{\hyperlink{classstratego_1_1_position}{Position}}\+: new position in the board \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classstratego_1_1_board_a29ae9bf9de0140ff92444587232cba56}\label{classstratego_1_1_board_a29ae9bf9de0140ff92444587232cba56}} 
+\index{stratego::Board@{stratego::Board}!newPositionDirection@{newPositionDirection}}
+\index{newPositionDirection@{newPositionDirection}!stratego::Board@{stratego::Board}}
+\doxysubsubsection{\texorpdfstring{newPositionDirection()}{newPositionDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classstratego_1_1_position}{Position}} stratego\+::\+Board\+::new\+Position\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstratego_1_1_position}{Position}} \&}]{pos,  }\item[{\mbox{\hyperlink{namespacestratego_aa06b5b555bc849993199885b46329582}{Direction}}}]{d }\end{DoxyParamCaption}) const}
+
+
+
+new\+Position\+Direction 
+
+Return the new position, the new position = pos + direction 
+\begin{DoxyParams}{Parameters}
+{\em pos} & \mbox{\hyperlink{classstratego_1_1_position}{Position}}\+: position in the board \\
+\hline
+{\em d} & Direction\+: direction of the position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+position 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classstratego_1_1_board_a1abf6c4c66c9615fc4dd626651646c3d}\label{classstratego_1_1_board_a1abf6c4c66c9615fc4dd626651646c3d}} 
+\index{stratego::Board@{stratego::Board}!column\_@{column\_}}
+\index{column\_@{column\_}!stratego::Board@{stratego::Board}}
+\doxysubsubsection{\texorpdfstring{column\_}{column\_}}
+{\footnotesize\ttfamily const size\+\_\+t stratego\+::\+Board\+::column\+\_\+ =10\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+column\+\_\+ 
+
+the number of column \mbox{\Hypertarget{classstratego_1_1_board_a586e16e241602545c7f56c1a1219d1b2}\label{classstratego_1_1_board_a586e16e241602545c7f56c1a1219d1b2}} 
+\index{stratego::Board@{stratego::Board}!row\_@{row\_}}
+\index{row\_@{row\_}!stratego::Board@{stratego::Board}}
+\doxysubsubsection{\texorpdfstring{row\_}{row\_}}
+{\footnotesize\ttfamily const size\+\_\+t stratego\+::\+Board\+::row\+\_\+ =10\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+row\+\_\+ 
+
+the number of row 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+board.\+h\item 
+board.\+cpp\end{DoxyCompactItemize}

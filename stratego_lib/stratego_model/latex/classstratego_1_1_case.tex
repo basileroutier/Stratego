@@ -1,0 +1,144 @@
+\hypertarget{classstratego_1_1_case}{}\doxysection{stratego\+::Case Class Reference}
+\label{classstratego_1_1_case}\index{stratego::Case@{stratego::Case}}
+
+
+The \mbox{\hyperlink{classstratego_1_1_case}{Case}} class.  
+
+
+
+
+{\ttfamily \#include $<$case.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classstratego_1_1_case_a0d96883b8fabcb4b3af5ed837c7d40b2}{Case}} (\mbox{\hyperlink{namespacestratego_ac763ed7dd0527f2a3a4871e29de17fc3}{Case\+Type}} case\+Type)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classstratego_1_1_case}{Case}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classstratego_1_1_case_aacd12a05a8b94857c9a11c8f7edad94a}{Case}} (\mbox{\hyperlink{classstratego_1_1_piece}{Piece}} piece)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classstratego_1_1_case}{Case}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacestratego_ac763ed7dd0527f2a3a4871e29de17fc3}{Case\+Type}} \mbox{\hyperlink{classstratego_1_1_case_a6859a8659caa1430b4c19205533c3b2e}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em get\+Type \end{DoxyCompactList}\item 
+std\+::optional$<$ \mbox{\hyperlink{classstratego_1_1_piece}{Piece}} $>$ \mbox{\hyperlink{classstratego_1_1_case_a2d2c8cf79d0721e12130e6570ea7ceba}{getcurrent\+Piece}} () const
+\begin{DoxyCompactList}\small\item\em getcurrent\+Piece \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstratego_1_1_case_a599b83598a4b37804b4ce4127244e172}{set\+Type}} (\mbox{\hyperlink{namespacestratego_ac763ed7dd0527f2a3a4871e29de17fc3}{Case\+Type}} type)
+\begin{DoxyCompactList}\small\item\em set\+Type \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstratego_1_1_case_a03edc7904b7ce677dd63c83354335090}{set\+Current\+Piece}} (\mbox{\hyperlink{classstratego_1_1_piece}{Piece}} piece)
+\begin{DoxyCompactList}\small\item\em set\+Current\+Piece \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classstratego_1_1_case_aea20f912cbafe030cb92e760f1754533}\label{classstratego_1_1_case_aea20f912cbafe030cb92e760f1754533}} 
+void {\bfseries reset\+Piece} ()
+\begin{DoxyCompactList}\small\item\em reset\+Piece Reset the current piece without any \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classstratego_1_1_case}{Case}} class. 
+
+\mbox{\hyperlink{classstratego_1_1_case}{Case}} can contain a part and contains a type to know of which type the box is 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstratego_1_1_case_a0d96883b8fabcb4b3af5ed837c7d40b2}\label{classstratego_1_1_case_a0d96883b8fabcb4b3af5ed837c7d40b2}} 
+\index{stratego::Case@{stratego::Case}!Case@{Case}}
+\index{Case@{Case}!stratego::Case@{stratego::Case}}
+\doxysubsubsection{\texorpdfstring{Case()}{Case()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily stratego\+::\+Case\+::\+Case (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacestratego_ac763ed7dd0527f2a3a4871e29de17fc3}{Case\+Type}}}]{case\+Type }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classstratego_1_1_case}{Case}}. 
+
+Simple constructor with case\+Type but without a \mbox{\hyperlink{classstratego_1_1_piece}{Piece}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em case\+Type} & Case\+Type\+: the type of the case \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classstratego_1_1_case_aacd12a05a8b94857c9a11c8f7edad94a}\label{classstratego_1_1_case_aacd12a05a8b94857c9a11c8f7edad94a}} 
+\index{stratego::Case@{stratego::Case}!Case@{Case}}
+\index{Case@{Case}!stratego::Case@{stratego::Case}}
+\doxysubsubsection{\texorpdfstring{Case()}{Case()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily stratego\+::\+Case\+::\+Case (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstratego_1_1_piece}{Piece}}}]{piece }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classstratego_1_1_case}{Case}}. 
+
+Simple constructor with piece but without a Case\+Type because It\textquotesingle{}s already an Army
+
+
+\begin{DoxyParams}{Parameters}
+{\em piece} & \mbox{\hyperlink{classstratego_1_1_piece}{Piece}}\+: the piece \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classstratego_1_1_case_a2d2c8cf79d0721e12130e6570ea7ceba}\label{classstratego_1_1_case_a2d2c8cf79d0721e12130e6570ea7ceba}} 
+\index{stratego::Case@{stratego::Case}!getcurrentPiece@{getcurrentPiece}}
+\index{getcurrentPiece@{getcurrentPiece}!stratego::Case@{stratego::Case}}
+\doxysubsubsection{\texorpdfstring{getcurrentPiece()}{getcurrentPiece()}}
+{\footnotesize\ttfamily std\+::optional$<$ \mbox{\hyperlink{classstratego_1_1_piece}{Piece}} $>$ stratego\+::\+Case\+::getcurrent\+Piece (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+getcurrent\+Piece 
+
+return the current piece into the \mbox{\hyperlink{classstratego_1_1_case}{Case}}
+
+\begin{DoxyReturn}{Returns}
+the current piece into the \mbox{\hyperlink{classstratego_1_1_case}{Case}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_case_a6859a8659caa1430b4c19205533c3b2e}\label{classstratego_1_1_case_a6859a8659caa1430b4c19205533c3b2e}} 
+\index{stratego::Case@{stratego::Case}!getType@{getType}}
+\index{getType@{getType}!stratego::Case@{stratego::Case}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacestratego_ac763ed7dd0527f2a3a4871e29de17fc3}{Case\+Type}} stratego\+::\+Case\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+Type 
+
+return the type of the case
+
+\begin{DoxyReturn}{Returns}
+the type of the case 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstratego_1_1_case_a03edc7904b7ce677dd63c83354335090}\label{classstratego_1_1_case_a03edc7904b7ce677dd63c83354335090}} 
+\index{stratego::Case@{stratego::Case}!setCurrentPiece@{setCurrentPiece}}
+\index{setCurrentPiece@{setCurrentPiece}!stratego::Case@{stratego::Case}}
+\doxysubsubsection{\texorpdfstring{setCurrentPiece()}{setCurrentPiece()}}
+{\footnotesize\ttfamily void stratego\+::\+Case\+::set\+Current\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classstratego_1_1_piece}{Piece}}}]{piece }\end{DoxyParamCaption})}
+
+
+
+set\+Current\+Piece 
+
+Set the current piece to a new piece
+
+
+\begin{DoxyParams}{Parameters}
+{\em piece} & \mbox{\hyperlink{classstratego_1_1_piece}{Piece}}\+: the new piece that will be placed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classstratego_1_1_case_a599b83598a4b37804b4ce4127244e172}\label{classstratego_1_1_case_a599b83598a4b37804b4ce4127244e172}} 
+\index{stratego::Case@{stratego::Case}!setType@{setType}}
+\index{setType@{setType}!stratego::Case@{stratego::Case}}
+\doxysubsubsection{\texorpdfstring{setType()}{setType()}}
+{\footnotesize\ttfamily void stratego\+::\+Case\+::set\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacestratego_ac763ed7dd0527f2a3a4871e29de17fc3}{Case\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+set\+Type 
+
+Set the type of a \mbox{\hyperlink{classstratego_1_1_case}{Case}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Case\+Type\+: type of the \mbox{\hyperlink{classstratego_1_1_case}{Case}} \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+case.\+h\item 
+case.\+cpp\end{DoxyCompactItemize}

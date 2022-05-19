@@ -1,0 +1,47 @@
+\hypertarget{observable_8h_source}{}\doxysection{observable.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef OBSERVABLE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define OBSERVABLE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <set>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}observer.h"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacestratego}{stratego}}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10     \textcolor{keyword}{namespace }utils}
+\DoxyCodeLine{11     \{}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13         \textcolor{keyword}{class }\mbox{\hyperlink{classstratego_1_1utils_1_1_observable}{Observable}}}
+\DoxyCodeLine{14         \{}
+\DoxyCodeLine{15             \textcolor{keyword}{private}:}
+\DoxyCodeLine{16                 std::set<Observer *> \_observers \{ \};}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18             \textcolor{keyword}{public}:}
+\DoxyCodeLine{19                 \textcolor{keyword}{virtual} \mbox{\hyperlink{classstratego_1_1utils_1_1_observable}{\string~Observable}}() = \textcolor{keywordflow}{default};    \textcolor{comment}{// polymorphism}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21                 \textcolor{comment}{//void notify() const;}}
+\DoxyCodeLine{22                 \textcolor{keywordtype}{void} notify(\textcolor{keyword}{const} std::string \& propertyName = \textcolor{stringliteral}{"{}No property"{}}) \textcolor{keyword}{const};}
+\DoxyCodeLine{23                 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} addObserver(\mbox{\hyperlink{classstratego_1_1utils_1_1_observer}{Observer}} *);}
+\DoxyCodeLine{24                 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} deleteObserver(\mbox{\hyperlink{classstratego_1_1utils_1_1_observer}{Observer}} *);}
+\DoxyCodeLine{25         \};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{comment}{// implements inline methods}}
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} Observable::addObserver(\mbox{\hyperlink{classstratego_1_1utils_1_1_observer}{Observer}} * observer)}
+\DoxyCodeLine{29     \{}
+\DoxyCodeLine{30         \_observers.insert(observer);}
+\DoxyCodeLine{31     \}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} Observable::deleteObserver(Observer * observer)}
+\DoxyCodeLine{34     \{}
+\DoxyCodeLine{35         \_observers.erase(observer);}
+\DoxyCodeLine{36     \}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     \} \textcolor{comment}{// end namespace utils}}
+\DoxyCodeLine{40 \} \textcolor{comment}{// end namespace stratego}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// OBSERVABLE\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,103 @@
+\hypertarget{game_8h_source}{}\doxysection{game.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef GAME\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define GAME\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}board.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}state.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}observable.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}position.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}illegalPositionException.hpp"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}illegalStateException.hpp"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}illegalDirectionException.hpp"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}illegalPieceException.hpp"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}illegalTeamException.hpp"{}}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacestratego}{stratego}} \{}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{22     \textcolor{keyword}{class }\mbox{\hyperlink{classstratego_1_1_game}{Game}} : \textcolor{keyword}{public} \mbox{\hyperlink{classstratego_1_1utils_1_1_observable}{utils::Observable}}\{}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24         \textcolor{keywordtype}{bool} ended\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{25         \textcolor{keywordtype}{bool} debug\_mode\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{26         \mbox{\hyperlink{namespacestratego_a83d6fb949f3282c71b9bced562c7b9d2}{TeamColor}} currentTeam\_ = TeamColor::RED;}
+\DoxyCodeLine{27         \mbox{\hyperlink{classstratego_1_1_board}{Board}} board\_;}
+\DoxyCodeLine{28         \mbox{\hyperlink{namespacestratego_a23af443ff4526ab41766f45a424981e0}{State}} current\_state\_= State::NOT\_STARTED;}
+\DoxyCodeLine{29         std::optional<Position> current\_position\_;}
+\DoxyCodeLine{30         std::optional<Position> new\_position\_;}
+\DoxyCodeLine{31         \mbox{\hyperlink{namespacestratego_a83d6fb949f3282c71b9bced562c7b9d2}{TeamColor}} winnerGame;}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keyword}{public}:}
+\DoxyCodeLine{38         \mbox{\hyperlink{classstratego_1_1_game_ac560e9ea4b49d1d81159a15b02bc0910}{Game}}();}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{47         \mbox{\hyperlink{classstratego_1_1_game_ac560e9ea4b49d1d81159a15b02bc0910}{Game}}(\mbox{\hyperlink{classstratego_1_1_board}{Board}} board);}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{54         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classstratego_1_1_game_a58d2328811b13827a3419924362927b2}{checkEnd}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{61         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classstratego_1_1_game_a7316cbaa4f63419e15d0d6efd140bf55}{checkEndFlag}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{67         \textcolor{keywordtype}{void} \mbox{\hyperlink{classstratego_1_1_game_a3fca7c8fa71a4939d00a1952879fe9d8}{play}}();}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{74         \mbox{\hyperlink{classstratego_1_1_board}{Board}} \& \mbox{\hyperlink{classstratego_1_1_game_af1331afab5fbe93c3e82e401d548f6ba}{getBoard}}();}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{83         \mbox{\hyperlink{namespacestratego_a23af443ff4526ab41766f45a424981e0}{State}} \mbox{\hyperlink{classstratego_1_1_game_a097581d3f0d3819b11ce165ce884f9a9}{getState}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{92         std::optional<Position> \mbox{\hyperlink{classstratego_1_1_game_ad1ed3d3b4818e6850a3c9df11644562c}{getCurrentPosition}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{101         std::optional<Position> \mbox{\hyperlink{classstratego_1_1_game_a2a9e3c81455854e46edf2ae857299520}{getNewPosition}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{111         std::optional<Piece> \mbox{\hyperlink{classstratego_1_1_game_a24dc611e6c2c33da060e0244bf5f14dc}{getPiece}}(\mbox{\hyperlink{classstratego_1_1_position}{Position}} position) \textcolor{keyword}{const};}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{120         \mbox{\hyperlink{namespacestratego_a83d6fb949f3282c71b9bced562c7b9d2}{TeamColor}} \mbox{\hyperlink{classstratego_1_1_game_a7da30fa047de3b3c9d2f680fe8520874}{getCurrentTeam}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{127         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classstratego_1_1_game_aad80cb4fcdbb7643279fec3e1b34caf3}{isInDebugMode}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{134         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classstratego_1_1_game_a114a6d7f6466f248377464bc78c23030}{isEnded}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{141         \textcolor{keywordtype}{void} \mbox{\hyperlink{classstratego_1_1_game_a6f59267bbdb434cdcd7b514546670676}{selectPiece}}(\mbox{\hyperlink{classstratego_1_1_position}{Position}} position);}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{149         \textcolor{keywordtype}{void} \mbox{\hyperlink{classstratego_1_1_game_a5e92cf46b74c5d2803a66764af40f304}{reverseDebugMode}}();}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{156         \textcolor{keywordtype}{void} \mbox{\hyperlink{classstratego_1_1_game_a1d963a3c3986a64b95f2b3894364ef08}{movePiece}}(\mbox{\hyperlink{namespacestratego_aa06b5b555bc849993199885b46329582}{Direction}} direction);}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{166         \textcolor{keywordtype}{void} \mbox{\hyperlink{classstratego_1_1_game_a4430e2a78166637879d93fe31f5beca6}{moveSpecialPiece}}(\mbox{\hyperlink{namespacestratego_aa06b5b555bc849993199885b46329582}{Direction}} direction, \textcolor{keywordtype}{int} numberOfMove);}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169 }
+\DoxyCodeLine{176         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classstratego_1_1_game_a877a6658d1f54914e7cbd8bc98ba0cc2}{canBeSelected}}(\mbox{\hyperlink{classstratego_1_1_position}{Position}} position) \textcolor{keyword}{const};}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{184         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classstratego_1_1_game_a758e690d73ff235a3e72466c1d2bf5b0}{canBeMove}}(\mbox{\hyperlink{namespacestratego_aa06b5b555bc849993199885b46329582}{Direction}} direction) \textcolor{keyword}{const};}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{197         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classstratego_1_1_game_a31f37f87e0591bbe38f760e7162ce719}{canBeMoveForEclaireur}}(\mbox{\hyperlink{namespacestratego_aa06b5b555bc849993199885b46329582}{Direction}} direction, \textcolor{keywordtype}{int} numberOfMove) \textcolor{keyword}{const};}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{199 }
+\DoxyCodeLine{200 }
+\DoxyCodeLine{206         \textcolor{keywordtype}{void} \mbox{\hyperlink{classstratego_1_1_game_a3e8743969f8b6d11bd8d621a80d6462c}{start}}(\textcolor{keywordtype}{int} nbFile);}
+\DoxyCodeLine{207 }
+\DoxyCodeLine{213         std::string \mbox{\hyperlink{classstratego_1_1_game_a02c720ac95de16e66335e0ab47a62e6a}{boardToString}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{214 }
+\DoxyCodeLine{215 }
+\DoxyCodeLine{221         \mbox{\hyperlink{namespacestratego_a83d6fb949f3282c71b9bced562c7b9d2}{TeamColor}} \mbox{\hyperlink{classstratego_1_1_game_a637f399a7e43db85c96e4200e359e14c}{getWinner}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{222 }
+\DoxyCodeLine{223     \textcolor{keyword}{private}:}
+\DoxyCodeLine{224 }
+\DoxyCodeLine{225         \textcolor{keywordtype}{void} resetAllPosition();}
+\DoxyCodeLine{226 }
+\DoxyCodeLine{234         \textcolor{keywordtype}{void} move(\mbox{\hyperlink{namespacestratego_aa06b5b555bc849993199885b46329582}{Direction}} direction);}
+\DoxyCodeLine{235 }
+\DoxyCodeLine{242         \textcolor{keywordtype}{void} setTeamNextTurn();}
+\DoxyCodeLine{243 }
+\DoxyCodeLine{244 }
+\DoxyCodeLine{250         \textcolor{keywordtype}{void} changeState(\mbox{\hyperlink{namespacestratego_a23af443ff4526ab41766f45a424981e0}{State}} state);}
+\DoxyCodeLine{251 }
+\DoxyCodeLine{260         \textcolor{keywordtype}{bool} isMovePositionCorrect(\mbox{\hyperlink{classstratego_1_1_position}{Position}} newPosition) \textcolor{keyword}{const};}
+\DoxyCodeLine{261 }
+\DoxyCodeLine{262         std::string addingHeaderBoard() \textcolor{keyword}{const};}
+\DoxyCodeLine{263     \};}
+\DoxyCodeLine{264 \}}
+\DoxyCodeLine{265 }
+\DoxyCodeLine{266 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// GAME\_H}}
+
+\end{DoxyCode}

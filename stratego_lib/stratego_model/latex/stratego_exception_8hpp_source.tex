@@ -1,0 +1,61 @@
+\hypertarget{stratego_exception_8hpp_source}{}\doxysection{stratego\+Exception.\+hpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef STRATEGOEXCEPTION\_HPP}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define STRATEGOEXCEPTION\_HPP}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <exception>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacestratego}{stratego}} \{}
+\DoxyCodeLine{8 \textcolor{keyword}{namespace }exception \{}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{13     \textcolor{keyword}{class }\mbox{\hyperlink{classstratego_1_1exception_1_1_stratego_exception}{StrategoException}}: \textcolor{keyword}{public} std::exception\{}
+\DoxyCodeLine{14     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{15         std::string \_msg;}
+\DoxyCodeLine{16         std::string \_fileName;}
+\DoxyCodeLine{17         std::string \_functionName;}
+\DoxyCodeLine{18         \textcolor{keywordtype}{int} \_line;}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{keyword}{public}:}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{30         \mbox{\hyperlink{classstratego_1_1exception_1_1_stratego_exception_a4be9eb4e380b2e98dcc93c27c045955e}{StrategoException}}(std::string \mbox{\hyperlink{classstratego_1_1exception_1_1_stratego_exception_a511eb80a3a1cce0068a8297f479cf19b}{msg}}, std::string \mbox{\hyperlink{classstratego_1_1exception_1_1_stratego_exception_a295a922592fc55994d06bd6a767eadaf}{fileName}}, std::string \mbox{\hyperlink{classstratego_1_1exception_1_1_stratego_exception_aba5bb7a3694e8f21a85d1a9cdcce2416}{functionName}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{classstratego_1_1exception_1_1_stratego_exception_ae655989df3663e353daedd6fb27cc87f}{line}}):}
+\DoxyCodeLine{31             \_msg \{\mbox{\hyperlink{classstratego_1_1exception_1_1_stratego_exception_a511eb80a3a1cce0068a8297f479cf19b}{msg}}\},}
+\DoxyCodeLine{32             \_fileName \{\mbox{\hyperlink{classstratego_1_1exception_1_1_stratego_exception_a295a922592fc55994d06bd6a767eadaf}{fileName}}\},}
+\DoxyCodeLine{33             \_functionName \{\mbox{\hyperlink{classstratego_1_1exception_1_1_stratego_exception_aba5bb7a3694e8f21a85d1a9cdcce2416}{functionName}}\},}
+\DoxyCodeLine{34             \_line \{\mbox{\hyperlink{classstratego_1_1exception_1_1_stratego_exception_ae655989df3663e353daedd6fb27cc87f}{line}}\}}
+\DoxyCodeLine{35         \{\}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37         \textcolor{keyword}{virtual} \mbox{\hyperlink{classstratego_1_1exception_1_1_stratego_exception}{\string~StrategoException}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{44         \textcolor{keyword}{inline} std::string \mbox{\hyperlink{classstratego_1_1exception_1_1_stratego_exception_acb599c8c33307682519bfb4b2fb5a8c9}{to\_string}}()\{}
+\DoxyCodeLine{45             std::string str = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{46             str += this-\/>\_msg + \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{47             str += \textcolor{stringliteral}{"{}On File : "{}} + this-\/>\_fileName + \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{48             str += \textcolor{stringliteral}{"{}On Function : "{}} + this-\/>\_functionName + \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{49             str += \textcolor{stringliteral}{"{}On Line : "{}} +  std::to\_string(this-\/>\_line) + \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{50             \textcolor{keywordflow}{return} str;}
+\DoxyCodeLine{51         \}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{58         \textcolor{keyword}{inline} std::string \mbox{\hyperlink{classstratego_1_1exception_1_1_stratego_exception_a511eb80a3a1cce0068a8297f479cf19b}{msg}}()\{}
+\DoxyCodeLine{59             \textcolor{keywordflow}{return} this-\/>\_msg;}
+\DoxyCodeLine{60         \}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{67         \textcolor{keyword}{inline} std::string \mbox{\hyperlink{classstratego_1_1exception_1_1_stratego_exception_a295a922592fc55994d06bd6a767eadaf}{fileName}}()\{}
+\DoxyCodeLine{68             \textcolor{keywordflow}{return} this-\/>\_fileName;}
+\DoxyCodeLine{69         \}}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{76         \textcolor{keyword}{inline} std::string \mbox{\hyperlink{classstratego_1_1exception_1_1_stratego_exception_aba5bb7a3694e8f21a85d1a9cdcce2416}{functionName}}()\{}
+\DoxyCodeLine{77             \textcolor{keywordflow}{return} this-\/>\_functionName;}
+\DoxyCodeLine{78         \}}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{85         \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{classstratego_1_1exception_1_1_stratego_exception_ae655989df3663e353daedd6fb27cc87f}{line}}()\{}
+\DoxyCodeLine{86             \textcolor{keywordflow}{return} this-\/>\_line;}
+\DoxyCodeLine{87         \}}
+\DoxyCodeLine{88     \};}
+\DoxyCodeLine{89 \}}
+\DoxyCodeLine{90 \}}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// STRATEGOEXCEPTION\_HPP}}
+
+\end{DoxyCode}

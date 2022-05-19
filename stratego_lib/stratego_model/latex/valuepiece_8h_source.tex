@@ -1,0 +1,104 @@
+\hypertarget{valuepiece_8h_source}{}\doxysection{valuepiece.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef VALEURPIECE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define VALEURPIECE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <stdexcept>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacestratego}{stratego}} \{}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{14     \textcolor{keyword}{enum} \mbox{\hyperlink{namespacestratego_a06ac02db02f93bd0ec9ebff7b7bcb16f}{ValuePiece}}}
+\DoxyCodeLine{15     \{}
+\DoxyCodeLine{16         MARECHAL = 10,}
+\DoxyCodeLine{17         GENERAL = 9,}
+\DoxyCodeLine{18         COLONEL = 8,}
+\DoxyCodeLine{19         MAJOR = 7,}
+\DoxyCodeLine{20         COMMANDANT = 6,}
+\DoxyCodeLine{21         LIEUTENANT = 5,}
+\DoxyCodeLine{22         SERGENT = 4,}
+\DoxyCodeLine{23         DEMINEUR = 3,}
+\DoxyCodeLine{24         ECLAIREUR = 2,}
+\DoxyCodeLine{25         ESPIONNE = 1,}
+\DoxyCodeLine{26         DRAPEAU = \textcolor{charliteral}{'D'},}
+\DoxyCodeLine{27         BOMBE = \textcolor{charliteral}{'B'}}
+\DoxyCodeLine{28     \};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{41     \textcolor{keyword}{static} \mbox{\hyperlink{namespacestratego_a06ac02db02f93bd0ec9ebff7b7bcb16f}{ValuePiece}} string\_to\_value\_piece(std::string value)\{}
+\DoxyCodeLine{42         \mbox{\hyperlink{namespacestratego_a06ac02db02f93bd0ec9ebff7b7bcb16f}{ValuePiece}} valPiece;}
+\DoxyCodeLine{43         \textcolor{keywordflow}{if}(value==\textcolor{stringliteral}{"{}10"{}})\{}
+\DoxyCodeLine{44             valPiece = ValuePiece::MARECHAL;}
+\DoxyCodeLine{45         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(value==\textcolor{stringliteral}{"{}9"{}})\{}
+\DoxyCodeLine{46             valPiece = ValuePiece::GENERAL;}
+\DoxyCodeLine{47         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(value==\textcolor{stringliteral}{"{}8"{}})\{}
+\DoxyCodeLine{48             valPiece = ValuePiece::COLONEL;}
+\DoxyCodeLine{49         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(value==\textcolor{stringliteral}{"{}7"{}})\{}
+\DoxyCodeLine{50             valPiece = ValuePiece::MAJOR;}
+\DoxyCodeLine{51         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(value==\textcolor{stringliteral}{"{}6"{}})\{}
+\DoxyCodeLine{52             valPiece = ValuePiece::COMMANDANT;}
+\DoxyCodeLine{53         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(value==\textcolor{stringliteral}{"{}5"{}})\{}
+\DoxyCodeLine{54             valPiece = ValuePiece::LIEUTENANT;}
+\DoxyCodeLine{55         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(value==\textcolor{stringliteral}{"{}4"{}})\{}
+\DoxyCodeLine{56             valPiece = ValuePiece::SERGENT;}
+\DoxyCodeLine{57         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(value==\textcolor{stringliteral}{"{}3"{}})\{}
+\DoxyCodeLine{58             valPiece = ValuePiece::DEMINEUR;}
+\DoxyCodeLine{59         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(value==\textcolor{stringliteral}{"{}2"{}})\{}
+\DoxyCodeLine{60             valPiece = ValuePiece::ECLAIREUR;}
+\DoxyCodeLine{61         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(value==\textcolor{stringliteral}{"{}1"{}})\{}
+\DoxyCodeLine{62             valPiece = ValuePiece::ESPIONNE;}
+\DoxyCodeLine{63         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(value==\textcolor{stringliteral}{"{}D"{}})\{}
+\DoxyCodeLine{64             valPiece = ValuePiece::DRAPEAU;}
+\DoxyCodeLine{65         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(value==\textcolor{stringliteral}{"{}B"{}})\{}
+\DoxyCodeLine{66             valPiece = ValuePiece::BOMBE;}
+\DoxyCodeLine{67         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{68             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"{}Aucun des choix existes"{}});}
+\DoxyCodeLine{69         \}}
+\DoxyCodeLine{70         \textcolor{keywordflow}{return} valPiece;}
+\DoxyCodeLine{71     \}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73     \textcolor{keyword}{static} std::string value\_piece\_to\_string(\mbox{\hyperlink{namespacestratego_a06ac02db02f93bd0ec9ebff7b7bcb16f}{ValuePiece}} valPiece)\{}
+\DoxyCodeLine{74         \textcolor{keywordflow}{switch}(valPiece)\{}
+\DoxyCodeLine{75         \textcolor{keywordflow}{case} MARECHAL:}
+\DoxyCodeLine{76             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}10"{}};}
+\DoxyCodeLine{77             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{78         \textcolor{keywordflow}{case} GENERAL:}
+\DoxyCodeLine{79             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{} 9"{}};}
+\DoxyCodeLine{80             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{81         \textcolor{keywordflow}{case} COLONEL:}
+\DoxyCodeLine{82             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{} 8"{}};}
+\DoxyCodeLine{83             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{84         \textcolor{keywordflow}{case} MAJOR:}
+\DoxyCodeLine{85             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{} 7"{}};}
+\DoxyCodeLine{86             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{87         \textcolor{keywordflow}{case} COMMANDANT:}
+\DoxyCodeLine{88             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{} 6"{}};}
+\DoxyCodeLine{89             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{90         \textcolor{keywordflow}{case} LIEUTENANT:}
+\DoxyCodeLine{91             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{} 5"{}};}
+\DoxyCodeLine{92             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{93         \textcolor{keywordflow}{case} SERGENT:}
+\DoxyCodeLine{94             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{} 4"{}};}
+\DoxyCodeLine{95             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{96         \textcolor{keywordflow}{case} DEMINEUR:}
+\DoxyCodeLine{97             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{} 3"{}};}
+\DoxyCodeLine{98             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{99         \textcolor{keywordflow}{case} ECLAIREUR:}
+\DoxyCodeLine{100             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{} 2"{}};}
+\DoxyCodeLine{101             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{102         \textcolor{keywordflow}{case} ESPIONNE:}
+\DoxyCodeLine{103             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{} 1"{}};}
+\DoxyCodeLine{104             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{105         \textcolor{keywordflow}{case} DRAPEAU:}
+\DoxyCodeLine{106             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{} D"{}};}
+\DoxyCodeLine{107             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{108         \textcolor{keywordflow}{case} BOMBE:}
+\DoxyCodeLine{109             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{} B"{}};}
+\DoxyCodeLine{110             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{111         \}}
+\DoxyCodeLine{112     \}}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114 \}}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// VALEURPIECE\_H}}
+
+\end{DoxyCode}

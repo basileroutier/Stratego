@@ -1,0 +1,8 @@
+var searchData=
+[
+  ['observable_0',['Observable',['../classstratego_1_1utils_1_1_observable.html',1,'stratego::utils']]],
+  ['observer_1',['Observer',['../classstratego_1_1utils_1_1_observer.html',1,'stratego::utils']]],
+  ['operator_21_3d_2',['operator!=',['../classstratego_1_1_position.html#ac4df06aa6b49cfbab621b8fcb8d24805',1,'stratego::Position']]],
+  ['operator_3d_3d_3',['operator==',['../classstratego_1_1_piece.html#acc37c297d35ff21972ae4faf9feec945',1,'stratego::Piece::operator==()'],['../classstratego_1_1_position.html#a17af16a0ad36ac3c22556f7486f4b2f4',1,'stratego::Position::operator==()']]],
+  ['operator_3e_4',['operator&gt;',['../classstratego_1_1_piece.html#acb98a43a12a27e8c065898f18e4d6aa0',1,'stratego::Piece']]]
+];

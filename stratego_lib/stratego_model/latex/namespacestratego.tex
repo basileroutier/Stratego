@@ -1,0 +1,170 @@
+\hypertarget{namespacestratego}{}\doxysection{stratego Namespace Reference}
+\label{namespacestratego}\index{stratego@{stratego}}
+
+
+The \mbox{\hyperlink{structstratego_1_1_terminal_color}{Terminal\+Color}} to write in color in terminal. So beautifull struct.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classstratego_1_1_board}{Board}}
+\item 
+class \mbox{\hyperlink{classstratego_1_1_case}{Case}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classstratego_1_1_case}{Case}} class. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classstratego_1_1_game}{Game}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classstratego_1_1_game}{Game}} class. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classstratego_1_1_piece}{Piece}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classstratego_1_1_piece}{Piece}} class. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classstratego_1_1_position}{Position}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classstratego_1_1_position}{Position}} class. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structstratego_1_1_terminal_color}{Terminal\+Color}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacestratego_ac763ed7dd0527f2a3a4871e29de17fc3}\label{namespacestratego_ac763ed7dd0527f2a3a4871e29de17fc3}} 
+enum \mbox{\hyperlink{namespacestratego_ac763ed7dd0527f2a3a4871e29de17fc3}{Case\+Type}} \{ {\bfseries Army} = \textquotesingle{}A\textquotesingle{}
+, {\bfseries Water} = \textquotesingle{}W\textquotesingle{}
+, {\bfseries Ground} = \textquotesingle{}G\textquotesingle{}
+ \}
+\begin{DoxyCompactList}\small\item\em The Case\+Type enum This enum represent a type for a Case. \end{DoxyCompactList}\item 
+enum class \mbox{\hyperlink{namespacestratego_aa06b5b555bc849993199885b46329582}{Direction}} \{ \newline
+{\bfseries HAUT}
+, {\bfseries BAS}
+, {\bfseries GAUCHE}
+, {\bfseries DROITE}
+, \newline
+{\bfseries NOT\+\_\+\+VALID}
+ \}
+\begin{DoxyCompactList}\small\item\em The Direction enum. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacestratego_a23af443ff4526ab41766f45a424981e0}{State}} \{ \newline
+{\bfseries NOT\+\_\+\+STARTED}
+, {\bfseries PICK\+\_\+\+PIECE}
+, {\bfseries MOVE\+\_\+\+PIECE}
+, {\bfseries UPDATING\+\_\+\+BOARD}
+, \newline
+{\bfseries END}
+ \}
+\begin{DoxyCompactList}\small\item\em The State enum. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacestratego_a83d6fb949f3282c71b9bced562c7b9d2}{Team\+Color}} \{ {\bfseries RED} = \textquotesingle{}R\textquotesingle{}
+, {\bfseries BLUE} = \textquotesingle{}B\textquotesingle{}
+, {\bfseries NONE} = \textquotesingle{}N\textquotesingle{}
+ \}
+\begin{DoxyCompactList}\small\item\em The Team\+Color enum. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacestratego_a06ac02db02f93bd0ec9ebff7b7bcb16f}{Value\+Piece}} \{ \newline
+{\bfseries MARECHAL} = 10
+, {\bfseries GENERAL} = 9
+, {\bfseries COLONEL} = 8
+, {\bfseries MAJOR} = 7
+, \newline
+{\bfseries COMMANDANT} = 6
+, {\bfseries LIEUTENANT} = 5
+, {\bfseries SERGENT} = 4
+, {\bfseries DEMINEUR} = 3
+, \newline
+{\bfseries ECLAIREUR} = 2
+, {\bfseries ESPIONNE} = 1
+, {\bfseries DRAPEAU} = \textquotesingle{}D\textquotesingle{}
+, {\bfseries BOMBE} = \textquotesingle{}B\textquotesingle{}
+ \}
+\begin{DoxyCompactList}\small\item\em The Valeur\+Piece enum. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classstratego_1_1_position}{Position}} \mbox{\hyperlink{namespacestratego_a23730125b5201085a8d46467f8edf9e3}{to\+\_\+position}} (\mbox{\hyperlink{namespacestratego_aa06b5b555bc849993199885b46329582}{Direction}} dir)
+\begin{DoxyCompactList}\small\item\em to\+\_\+position \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classstratego_1_1_position}{Position}} \mbox{\hyperlink{namespacestratego_a211fbb5d35d181c6de1002cf31ef3667}{position\+\_\+diretion}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{structstratego_1_1_terminal_color}{Terminal\+Color}} to write in color in terminal. So beautifull struct. 
+
+This class represent the board. The board is a 2D array of \mbox{\hyperlink{classstratego_1_1_case}{Case}} and its size is 10x10. The board has also an attribute for the row and column, their value is 10 and can\textquotesingle{}t be modified.
+
+\begin{DoxyAuthor}{Author}
+pbt -\/ Pierre Bettens \href{mailto:pbettens@he2b.be}{\texttt{ pbettens@he2b.\+be}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacestratego_aa06b5b555bc849993199885b46329582}\label{namespacestratego_aa06b5b555bc849993199885b46329582}} 
+\index{stratego@{stratego}!Direction@{Direction}}
+\index{Direction@{Direction}!stratego@{stratego}}
+\doxysubsubsection{\texorpdfstring{Direction}{Direction}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespacestratego_aa06b5b555bc849993199885b46329582}{stratego\+::\+Direction}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+The Direction enum. 
+
+This class represent a direction. There are only 4 directions \mbox{\Hypertarget{namespacestratego_a23af443ff4526ab41766f45a424981e0}\label{namespacestratego_a23af443ff4526ab41766f45a424981e0}} 
+\index{stratego@{stratego}!State@{State}}
+\index{State@{State}!stratego@{stratego}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacestratego_a23af443ff4526ab41766f45a424981e0}{stratego\+::\+State}}}
+
+
+
+The State enum. 
+
+Describe the current state of the game \mbox{\Hypertarget{namespacestratego_a83d6fb949f3282c71b9bced562c7b9d2}\label{namespacestratego_a83d6fb949f3282c71b9bced562c7b9d2}} 
+\index{stratego@{stratego}!TeamColor@{TeamColor}}
+\index{TeamColor@{TeamColor}!stratego@{stratego}}
+\doxysubsubsection{\texorpdfstring{TeamColor}{TeamColor}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacestratego_a83d6fb949f3282c71b9bced562c7b9d2}{stratego\+::\+Team\+Color}}}
+
+
+
+The Team\+Color enum. 
+
+Describe the team color of specific thing in game \mbox{\Hypertarget{namespacestratego_a06ac02db02f93bd0ec9ebff7b7bcb16f}\label{namespacestratego_a06ac02db02f93bd0ec9ebff7b7bcb16f}} 
+\index{stratego@{stratego}!ValuePiece@{ValuePiece}}
+\index{ValuePiece@{ValuePiece}!stratego@{stratego}}
+\doxysubsubsection{\texorpdfstring{ValuePiece}{ValuePiece}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacestratego_a06ac02db02f93bd0ec9ebff7b7bcb16f}{stratego\+::\+Value\+Piece}}}
+
+
+
+The Valeur\+Piece enum. 
+
+Describe the value of a piece 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacestratego_a23730125b5201085a8d46467f8edf9e3}\label{namespacestratego_a23730125b5201085a8d46467f8edf9e3}} 
+\index{stratego@{stratego}!to\_position@{to\_position}}
+\index{to\_position@{to\_position}!stratego@{stratego}}
+\doxysubsubsection{\texorpdfstring{to\_position()}{to\_position()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classstratego_1_1_position}{Position}} stratego\+::to\+\_\+position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacestratego_aa06b5b555bc849993199885b46329582}{Direction}}}]{dir }\end{DoxyParamCaption})}
+
+
+
+to\+\_\+position 
+
+Convert the direction to a position 
+\begin{DoxyParams}{Parameters}
+{\em dir} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacestratego_a211fbb5d35d181c6de1002cf31ef3667}\label{namespacestratego_a211fbb5d35d181c6de1002cf31ef3667}} 
+\index{stratego@{stratego}!position\_diretion@{position\_diretion}}
+\index{position\_diretion@{position\_diretion}!stratego@{stratego}}
+\doxysubsubsection{\texorpdfstring{position\_diretion}{position\_diretion}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classstratego_1_1_position}{Position}} stratego\+::position\+\_\+diretion\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\{  \mbox{\hyperlink{classstratego_1_1_position}{Position}} \{ 1, 0 \},  Position \{ -\/1, 0 \}, Position\{0, -\/1\}, Position\{0,1\} \}}
+
+\end{DoxyCode}

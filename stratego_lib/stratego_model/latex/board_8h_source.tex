@@ -1,0 +1,96 @@
+\hypertarget{board_8h_source}{}\doxysection{board.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef BOARD\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define BOARD\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}piece.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <array>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}position.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}case.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <optional>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}direction.h"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 }
+\DoxyCodeLine{19 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacestratego}{stratego}} \{}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{keyword}{class }\mbox{\hyperlink{classstratego_1_1_board}{Board}}\{}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{keyword}{public}:}
+\DoxyCodeLine{28         \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{classstratego_1_1_board_a586e16e241602545c7f56c1a1219d1b2}{row\_}}=10;}
+\DoxyCodeLine{33         \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{classstratego_1_1_board_a1abf6c4c66c9615fc4dd626651646c3d}{column\_}}=10;}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{keyword}{private}:}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{41         std::array<std::string, 2> file\_ = \{\textcolor{stringliteral}{"{}../data/game/team.txt"{}}, \textcolor{stringliteral}{"{}../data/game/otherTeam.txt"{}}\};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{47         std::array<std::array<std::optional<Case>, \mbox{\hyperlink{classstratego_1_1_board_a1abf6c4c66c9615fc4dd626651646c3d}{column\_}}>,\mbox{\hyperlink{classstratego_1_1_board_a586e16e241602545c7f56c1a1219d1b2}{row\_}}> board\_;}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{53         \textcolor{keywordtype}{void} initializeStartedBoard();}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{59         \textcolor{keywordtype}{void} initializeWaterBoard();}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61     public :}
+\DoxyCodeLine{66         \mbox{\hyperlink{classstratego_1_1_board_a580d5774daa5c2fa87cc65ab44407c85}{Board}}();}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{75         \mbox{\hyperlink{classstratego_1_1_board_a580d5774daa5c2fa87cc65ab44407c85}{Board}}(std::array<std::string, 2> file);}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{81         \textcolor{keywordtype}{void} \mbox{\hyperlink{classstratego_1_1_board_addf7c33278b2d9eb186d5a3ebed8060d}{initializeBoardPlayer}}(\textcolor{keywordtype}{int} numberOfFile);}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{88         std::array<std::array<std::optional<Case>, \mbox{\hyperlink{classstratego_1_1_board_a1abf6c4c66c9615fc4dd626651646c3d}{column\_}}>,\mbox{\hyperlink{classstratego_1_1_board_a586e16e241602545c7f56c1a1219d1b2}{row\_}}> \textcolor{keyword}{const} \& \mbox{\hyperlink{classstratego_1_1_board_acd7b26999011a0d5294bb3d4bf3a3e86}{board}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{96         std::optional<Case> \mbox{\hyperlink{classstratego_1_1_board_ac83e3898c9584731815fc3be243cd58e}{getCase}}(\mbox{\hyperlink{classstratego_1_1_position}{Position}} pos) \textcolor{keyword}{const};}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{106         std::optional<Piece> \mbox{\hyperlink{classstratego_1_1_board_a535fa87f88d612d0266814051b8b1016}{getPiece}}(\mbox{\hyperlink{classstratego_1_1_position}{Position}} pos) \textcolor{keyword}{const};}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{116         \mbox{\hyperlink{namespacestratego_a06ac02db02f93bd0ec9ebff7b7bcb16f}{ValuePiece}} \mbox{\hyperlink{classstratego_1_1_board_a5b1ea0d1a5809b48bde0ae46880b7a9a}{getValuePiece}}(\mbox{\hyperlink{classstratego_1_1_position}{Position}} pos) \textcolor{keyword}{const};}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{124         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classstratego_1_1_board_ac429626c40fb6ea44288e9829ddae769}{isCasePiece}}(\mbox{\hyperlink{classstratego_1_1_position}{Position}} pos) \textcolor{keyword}{const};}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{132         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classstratego_1_1_board_a3c5812882f3320acf854082fe888b155}{isCaseWater}}(\mbox{\hyperlink{classstratego_1_1_position}{Position}} pos) \textcolor{keyword}{const};}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{140         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classstratego_1_1_board_ab59a96d781ef673ace5f087907987ad2}{isCaseGround}}(\mbox{\hyperlink{classstratego_1_1_position}{Position}} pos) \textcolor{keyword}{const};}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{148         \mbox{\hyperlink{namespacestratego_ac763ed7dd0527f2a3a4871e29de17fc3}{CaseType}} \mbox{\hyperlink{classstratego_1_1_board_acfab0eb58f16aa25149a447dd5dcb994}{getTypeCase}}(\mbox{\hyperlink{classstratego_1_1_position}{Position}} pos) \textcolor{keyword}{const};}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{156         \textcolor{keywordtype}{void} \mbox{\hyperlink{classstratego_1_1_board_a849e6c3ba9adbe8fe501bcc732d570e4}{movePiece}}(\mbox{\hyperlink{classstratego_1_1_position}{Position}} currentPos, \mbox{\hyperlink{classstratego_1_1_position}{Position}} newPos);}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158 }
+\DoxyCodeLine{166         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classstratego_1_1_board_a59d5379a42afd5ee5d0c6be871766795}{isCombat}}(\mbox{\hyperlink{classstratego_1_1_position}{Position}} position,\mbox{\hyperlink{classstratego_1_1_position}{Position}} newPosition) \textcolor{keyword}{const};}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{175         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classstratego_1_1_board_ab220f0824af49f421ca62696cac8f83d}{isSameTeam}}(\mbox{\hyperlink{classstratego_1_1_position}{Position}} positionPiece, \mbox{\hyperlink{classstratego_1_1_position}{Position}} newPosition) \textcolor{keyword}{const};}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{184         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classstratego_1_1_board_ab220f0824af49f421ca62696cac8f83d}{isSameTeam}}(\mbox{\hyperlink{classstratego_1_1_position}{Position}} positionPiece, \mbox{\hyperlink{namespacestratego_a83d6fb949f3282c71b9bced562c7b9d2}{TeamColor}} team) \textcolor{keyword}{const};}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{192         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classstratego_1_1_board_a5cc6386068535833087731421f4be51a}{isInside}}(\mbox{\hyperlink{classstratego_1_1_position}{Position}} pos) \textcolor{keyword}{const};}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{201         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classstratego_1_1_board_ab8dccea26618d34fca0292a1ba4ac2d3}{canBePut}}(\mbox{\hyperlink{classstratego_1_1_position}{Position}} currentPos, \mbox{\hyperlink{classstratego_1_1_position}{Position}} newPos) \textcolor{keyword}{const};}
+\DoxyCodeLine{202 }
+\DoxyCodeLine{210         \mbox{\hyperlink{classstratego_1_1_position}{Position}} \mbox{\hyperlink{classstratego_1_1_board_a29ae9bf9de0140ff92444587232cba56}{newPositionDirection}}(\mbox{\hyperlink{classstratego_1_1_position}{Position}} \& pos, \mbox{\hyperlink{namespacestratego_aa06b5b555bc849993199885b46329582}{Direction}} d) \textcolor{keyword}{const};}
+\DoxyCodeLine{211 }
+\DoxyCodeLine{215         \mbox{\hyperlink{classstratego_1_1_board_a6ba71d87b1c9df534c882139283655a3}{\string~Board}}()= \textcolor{keywordflow}{default};}
+\DoxyCodeLine{216 }
+\DoxyCodeLine{225         \textcolor{keywordtype}{void} \mbox{\hyperlink{classstratego_1_1_board_a246735654668d4006e0a7139d4e9f221}{combat}}(\mbox{\hyperlink{classstratego_1_1_position}{Position}} currentPos, \mbox{\hyperlink{classstratego_1_1_position}{Position}} newPos);}
+\DoxyCodeLine{226 }
+\DoxyCodeLine{227         private :}
+\DoxyCodeLine{228 }
+\DoxyCodeLine{235         \textcolor{keywordtype}{void} put(\mbox{\hyperlink{classstratego_1_1_case}{Case}} piece, \mbox{\hyperlink{classstratego_1_1_position}{Position}} pos);}
+\DoxyCodeLine{236 }
+\DoxyCodeLine{245         \textcolor{keywordtype}{void} deleteCase(\mbox{\hyperlink{classstratego_1_1_position}{Position}} position);}
+\DoxyCodeLine{246 }
+\DoxyCodeLine{253         \textcolor{keywordtype}{void} moveCase(\mbox{\hyperlink{classstratego_1_1_position}{Position}} position, \mbox{\hyperlink{classstratego_1_1_case}{Case}} \&piece);}
+\DoxyCodeLine{254 }
+\DoxyCodeLine{264         \mbox{\hyperlink{classstratego_1_1_piece}{Piece}} createPiece(\mbox{\hyperlink{namespacestratego_a06ac02db02f93bd0ec9ebff7b7bcb16f}{ValuePiece}} piece, \mbox{\hyperlink{namespacestratego_a83d6fb949f3282c71b9bced562c7b9d2}{TeamColor}} teamColor) \textcolor{keyword}{const};}
+\DoxyCodeLine{265 }
+\DoxyCodeLine{273         std::map<ValuePiece, int> getMapNumberPiece() \textcolor{keyword}{const};}
+\DoxyCodeLine{274 }
+\DoxyCodeLine{287         \textcolor{keywordtype}{void} readFile(std::string file, \textcolor{keywordtype}{int} row, \mbox{\hyperlink{namespacestratego_a83d6fb949f3282c71b9bced562c7b9d2}{TeamColor}} team, \textcolor{keywordtype}{bool} upToDown);}
+\DoxyCodeLine{288 }
+\DoxyCodeLine{289     \};}
+\DoxyCodeLine{290 \}}
+\DoxyCodeLine{291 }
+\DoxyCodeLine{292 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// BOARD\_H}}
+
+\end{DoxyCode}
