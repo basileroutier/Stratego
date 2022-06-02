@@ -31,7 +31,7 @@
       <x>940</x>
       <y>40</y>
       <width>171</width>
-      <height>271</height>
+      <height>231</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -39,16 +39,6 @@
       <widget class="QLabel" name="stateLabel">
        <property name="text">
         <string/>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="debugMode">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="text">
-        <string>Debug Mode</string>
        </property>
       </widget>
      </item>
@@ -73,6 +63,23 @@
       <widget class="QPushButton" name="startButton">
        <property name="text">
         <string>Start</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="debugMode">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>Debug Mode</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="shufflePiece">
+       <property name="text">
+        <string>Melanger pièces</string>
        </property>
       </widget>
      </item>

@@ -1,95 +1,101 @@
 # Stratego
 
-The Stratego game was developed in C++.
-
 ## Introduction
 
-This repository will contain the Stratego project. It will be continuously updated by the team members.
+Ce dépôt contiendra le projet Stratego. Qui sera continuellement mis à jours par les binômes de cette équipe.
 
-This project will respect the different design patterns such as :
+Ce projet respectera les différents design pattern tel que :
 	1. MVC
 	2. Observer/Observable
 
-### Description of the game
-Stratego is a group game about war that requires a great deal of strategic thinking. 
-The origin of the game comes from the Netherlands, where it was invented shortly after the Second World War. 
-But at that time, the game was still a table game. Since then, the game has been transformed from a board game to a field game: first with playing cards, then with specially created cards
+### Description du jeu
+Stratego est un jeu de groupe qui a pour sujet la guerre et qui demande une grande notion de stratégie. 
+L'origine du jeu nous vient des Pays-Bas, où il a été inventé peu après la Seconde Guerre mondiale. 
+Mais à cette époque, le jeu restait un jeu de table. Depuis, on ne sait d'où, le jeu a été transformé non plus en jeu de société, mais en jeu de terrain : au début avec des cartes à jouer, puis avec des cartes spécialement créées
 
-**Source: Wikipedia. Link: https://fr.wikipedia.org/wiki/Stratego_(homonymity)**
+**Source : Wikipedia. Lien : https://fr.wikipedia.org/wiki/Stratego_(homonymie)**
 
-Project created by :
+Projet créer par :
 		- Basile Routier - 54018
 		- Ian Cotton - 55019
 
 ## Header
-~~All headers are located in the Stratego folder~~
-~~Some headers can be modified due to the fact that we can't model everything directly~~
-~~Attributes and methods contain const to allow secure and quicker access to attributes~~
+~~Tous les headers se trouvent dans le dossier Stratego~~
+~~Certains headers peuvent être modifiés du au faite qu'on ne puisse pas modélisé le tout directement~~
+~~Les attributs et méthodes contiennent des const pour pouvoir un accès sécurisé et plus rapide des attributs~~
 
 
-## Library
-> The library replaces the old Stratego folder containing all the source files, headers, etc...
-	1. Allows a better decomposition between the model and our view/controller
-	2. Allows us to have a graphical and console view afterwards
+## Librairie
+> La librairie remplace l'ancien dossier Stratego contenant tous les fichiers sources, en-tête, etc...
+	1. Permet une meilleure décomposition entre le model et notre view/controller
+	2. Permet d'avoir par la suite une vue graphique et console
 
 ### Model
-	The model is in the stratego_model folder
-		- Contains the HEADERS and SOURCES files
-1. ***We have replaced the bare pointers by optionals 'Case' and optional 'Piece'***.
-	1. **This modification was done _during_ the project to replace the pointers and not have to manage them anymore**.
-	2. The modification also entails that a Case contains a Piece and is not a Piece.
-2. ***We have taken into account the comments posted in the COMMENTS.md file of iteration 1 and tried to reduce the whole thing. Only the positions have been left unchanged because it makes it easier to test things in our methods***.
-2. **Some changes have been added to the GUI to make the game run without complications.
-	1. *We have a method that converts a position to a direction.
-	2. *A method to get the game in a 2d string table version to know the location of the pieces and boxes*.
+	Le model est dans le dossier stratego_model
+		- Contient les fichiers HEADERS et SOURCES
+1. ***Nous avons remplacés les pointeurs nue par des optionals 'Case' et optional'Piece'***
+	1. **Cette modification s'est faite _durant_ le projet pour remplacé les pointeurs et ne plus devoir les gérés**
+	2. La modification entraine aussi le faite qu'une Case contient une Piece et n'en ai pas une.
+2. ***Nous avons pris en compte les commentaires postés dans le fichier COMMENTS.md de l'itération 1 et avons essayé de réduire le tout. Seul les positions sont restés inchangés car nous permet plus facilement de tester certains choses dans nos méthodes***
+2. **Des modifications ont été ajoutés lors de l'interface graphique pour pouvoir faire fonctionner le jeu sans complication.**
+	1. *Nous avons une méthode convertissant une position vers une direction.*
+	2. *Une méthode permettant de récupérer le jeu en version tableau 2d de string permettant de savoir l'endroit des pièces et cases*
 
 ### View console
-	The important classes for the use of the console view can be found in the stratego-view-console file
-		- Contains the important classes
+	Les classes importantes pour l'utilisation de la vue console se trouve dans le dosser stratego-view-console
+		- Contient les classes importantes
 			- Controller
 			- View
 
-## REPORT - MTD/MCD
-The technical class diagram is located in the MCD folder, all attributes and methods are located directly in the diagram
-Types and associations are specified on it
-1. **Modifications are to be made in the diagram**.
-	- Some classes have undefined and useless methods
-	- Some files have been deleted to reduce too extreme and useless decomposition
+## RAPPORT - MTD/MCD
+Le diagramme de classe technique se trouve dans le dossier MCD, tous les attributs et méthodes se trouvent directement dans le diagramme
+Les types et associations sont spécifiés dessus
+1. **Des modifications sont à _apporter_ dans le diagramme**
+	- Certaines classes ont des méthodes dépréssier et inutile
+	- Des fichiers ont été supprimés pour réduire une décomposition trop extrême et ne servant à rien
 
-### Changes in the MTD
-Some changes took place such as:
-	1. Modification of pointers to optional
-	2. Change of methods and removal of unused methods
-	3. Respect of the DRY principle
-	4. ***Big changes have taken place at the level of classes***.
-		- This is due to the fact that a box is not a room but contains one
-		- It was necessary to readapt the whole structure of our boxes
+### Changement dans le MTD
+Certains changements ont eu lieu tel que :
+	1. La modification des pointeurs vers des optional
+	2. Changement de méthodes et suppression des méthodes non utilisés
+	3. Respect du principe du DRY
+	4. ***De gros changements, ont eu lieu aux niveaux des classes***
+		- Cela est du au faite qu'une case n'est pas une pièce mais en contient une
+		- Il fallait donc réadapter toute la structure de nos cases
 # COMPILATION
-***!!! IT IS IMPORTANT TO FOLLOW THE FOLLOWING PROCEDURE OTHERWISE THE PROGRAM WILL NOT FIND THE CONFIGURATION FILES!!!***
-**If you decide to modify the configuration text files it will have NO impact on the tests**.
-	1. To compile the project, please go to QT and go to :
-		1. Projects then click on the 'Run' BUTTON and change the 'Working directory' and change to the path
-			- Path : "i-cotton-b-routier\stratego_lib"
-	2. Compile simply by pressing the button Buidl and Run
-		- If an error message is displayed restart the compilation at the same time of run and everything will work :)
-	3. Otherwise use QMake (which is normally done automatically)
+***!!! IL EST IMPORTANT DE SUIVRE LA DEMARCHE SUIVANTE SINON LE PROGRAMME NE TROUVERA PAS LES FICHIERS DE CONFIGURATION !!!***
+**Si vous décidez de modifier les fichiers texte de configuration cela n'aura AUCUN impact sur les tests**
+	1. Pour compiler le projet, veuillez vous rendre sur QT et aller dans :
+		1. Projets puis cliquez sur le BOUTON 'Run' et changer le 'Working directory' et modifiez vers le chemin
+			- Chemin : "i-cotton-b-routier\stratego_lib"
+	2. Compiler simplement en appuyant le sur bouton Buidl and Run
+		- Si un message d'erreur s'affiche relancer la compilation en même temps de run et tout fonctionnera :)
+	3. Sinon utiliser QMake (qui normalement se fait automatiquement)
 
 
-# Implementation
+# Implémentation
 
-## Console implementation
-	Usage :
-		1. Each day plays its turn and choose a piece to move in the game
-		2. Asking the position of the piece and the direction to go
-			- If one piece meets another, a fight is started between the two.
-		3. For more rules, here is a link to this one: https://fr.wikipedia.org/wiki/Stratego
-	Game image :
-![View Image](Images/console.png)
+## Implémentation Console
+	Utilisation :
+		1. Chaque jour joue son tour et choisi une pièce pour pouvoir la déplacer dans le jeu
+		2. Demandant la position de la pièce et la direction vers où aller
+			- Si une pièce rencontre une autre, un combat est lancé entre les deux.
+		3. Pour plus de règles, voici un lien regroupant celui-ci : https://fr.wikipedia.org/wiki/Stratego
+	Image du jeu :
+![Image de la vue](Images/console.png)
 
 
-## GUI implementation
-	Controller: 
-		1. The UPDATING_BOARD state is not used in the GUI version
-			1. Is more complicated to implement (more code for less readability)
-	Start button :
-		1. If the configuration files are not correctly configured and the algorithms detect it -> the game closes abruptly (and no message is displayed)
+## Implémentation GUI
+	Controller : 
+		1. L'état UPDATING_BOARD n'est pas utilsé dans la version GUI
+			1. Est plus compliqué à implementé (plus de code pour moins de lisibilité)
+	Bouton start :
+		1. Si les fichiers de configurations ne sont pas correctement configuré et que l'algorithmes le détectent -> le jeu se ferme brusquement (et aucun message n'est affiché) -> sauf en mode console ou l'erreur est affiché (à cause de l'erreur)
+
+	### Modifications apportés
+		1. Modification effectué dans Board.cpp -> initialisation du board complet dans une seul et même méthode pour la fonctionnalité restart
+		2. Modifciation du Game.cpp -> ajout d'une méthode pour restart
+		3. Modification du UiBoard.cpp -> pour l'update du jeu
+	
+
+

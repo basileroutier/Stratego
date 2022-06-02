@@ -25,7 +25,17 @@ class uiController{
          */
         void play(std::optional<Position> position, std::optional<int> numberOfMoveDirection);
 
+        /**
+         * @brief reverseDebugMode
+         * Called the reverseDebugMode method of the game.
+         */
         void reverseDebugMode();
+
+        /**
+         * Shuffle order of piece in the game
+         * @brief shufflePieces
+         */
+        void shufflePieces();
 
      private:
         /**

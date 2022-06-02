@@ -58,6 +58,11 @@ class UiCell : public QObject, public QGraphicsRectItem
                const QStyleOptionGraphicsItem * option,
                QWidget * widget);
 
+    /**
+     * @brief setBorder
+     * @param border
+     * Enable or disable the border of a cell.
+     */
     void setBorder(bool border);
 
   protected:

@@ -20,9 +20,17 @@ class UiBoard : public QWidget
   private:
     std::vector<UiCellPiece *> _cells;
 
+    /**
+     * @brief initializeOneCellOnBoard
+     * @param j
+     * @param i
+     * @param width
+     * @param heigth
+     * @param color
+     * @param nameImage
+     * Initialize the cell on the UIBoard
+     */
     void initializeOneCellOnBoard(int j, int i, unsigned width, unsigned heigth, QColor color, std::optional<std::string> nameImage);
-    void delay();
-
 
     /**
      * @brief setSignalToButton
@@ -53,6 +61,14 @@ signals:
      * set a layout for the board
      */
     void setLayoutBoard();
+
+    /**
+     * @brief setBorderToPiece
+     * @param pos
+     * @param posMax
+     * @param isBorder
+     * Display a border to a piece
+     */
     void setBorderToPiece(Position pos, int posMax, bool isBorder);
 
 

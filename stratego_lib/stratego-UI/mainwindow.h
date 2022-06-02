@@ -47,7 +47,13 @@ private slots:
 
   void clearTextError();
 
+  /**
+   * @brief on_debugMode_clicked
+   * Called the reversedebugmode method of the uiController
+   */
   void on_debugMode_clicked();
+
+  void on_shufflePiece_clicked();
 
 public:
   virtual void update(const stratego::State state, Game &game);

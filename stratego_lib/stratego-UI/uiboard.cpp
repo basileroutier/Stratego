@@ -120,9 +120,9 @@ void UiBoard::updateBoard(const Game &game)
                 _cells.at(rowCol)->withPiece(true);
             }else{
                 std::string imageName = gameTest.at(i).at(j);
-                if(game.getCurrentTeam()==TeamColor::BLUE){
+                if(game.getPiece(Position{i,j})->team()==TeamColor::BLUE){
                     imageName+="B";
-                }else if(game.getCurrentTeam()==TeamColor::RED){
+                }else if(game.getPiece(Position{i,j})->team()==TeamColor::RED){
                     imageName+="R";
                 }
                 _cells.at(rowCol)->setImageNamePiece(imageName);

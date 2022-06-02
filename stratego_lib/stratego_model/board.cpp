@@ -6,8 +6,6 @@
 namespace stratego {
 
 Board::Board(){
-    initializeStartedBoard();
-    initializeWaterBoard();
 }
 
 Board::Board(std::array<std::string, 2> file) : Board{}
@@ -38,6 +36,8 @@ void Board::initializeWaterBoard()
 
 void Board::initializeBoardPlayer(int numberOfFile)
 {
+    initializeStartedBoard();
+    initializeWaterBoard();
     std::array<std::string, 2> fileChoice;
     if(numberOfFile==1){
         fileChoice = {file_[0], file_[0]};
@@ -199,6 +199,15 @@ void Board::combat(Position currentPos, Position newPos){
     }else{
         deleteCase(currentPos);
     }
+}
+
+void Board::randomMovePiece(Position firstPos, Position secondPos)
+{
+    std::optional<Case> firstPiece = board_[firstPos.row()][firstPos.column()];
+    std::optional<Case> secondPiece = board_[secondPos.row()][secondPos.column()];
+
+    moveCase(secondPos, *firstPiece);
+    moveCase(firstPos, *secondPiece);
 }
 
 Piece Board::createPiece(ValuePiece piece, TeamColor teamColor) const

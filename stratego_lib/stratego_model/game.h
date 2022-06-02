@@ -29,6 +29,7 @@ namespace stratego {
         inline static std::string PROPERTY_IS_FIGHT_BETWEEN_PIECE="game.isFightBetweenPiece";
         inline static std::string PROPERTY_REVERSE_DEBUG_MODE="game.reverseDebugMode";
         inline static std::string PROPERTY_END_GAME="game.endGameOver";
+        inline static std::string PROPERTY_SHUFFLE_GAME= "game.shufflePiece";
 
 
     private:
@@ -217,6 +218,14 @@ namespace stratego {
          */
         void start(int nbFile);
 
+
+        /**
+         * call the method initializeboardpiece of the board
+         * @brief restart
+         * @param nbFile
+         */
+        void restart(int nbFile);
+
         /**
          * Convert the board to a string
          * @brief boardToString
@@ -239,15 +248,41 @@ namespace stratego {
          */
         TeamColor getWinner() const;
 
+        /**
+         * @brief convertPositionToDirection
+         * @param pos
+         * @return Direction
+         *
+         * Convert a position to a direction
+         */
         Direction convertPositionToDirection(Position pos) const;
 
+        /**
+         * @brief convertPositionToNumberOfMove
+         * @param pos
+         * @param direction
+         * @return int
+         * Return the number of move necessary to go to the given position with the given direction
+         */
         int convertPositionToNumberOfMove(Position pos, Direction direction) const;
 
+
+        void shufflePiecesPlayer();
+
+        /**
+         * @brief notifyMessage
+         * @param property
+         * @param message
+         * notify some classes by calling their update method (the class who are observer are called)
+         */
         void notifyMessage(const std::string& property, const std::string& message) const;
 
 
 
+
     private:
+
+        std::vector<Position> getAllPositionFromCurrentPlayer();
 
         void resetAllPosition();
 
@@ -286,6 +321,11 @@ namespace stratego {
          */
         bool isMovePositionCorrect(Position newPosition) const;
 
+        /**
+         * @brief addingHeaderBoard
+         * @return String
+         * add a header to the board and return it.
+         */
         std::string addingHeaderBoard() const;
     };
 }

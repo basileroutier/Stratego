@@ -11,8 +11,12 @@ void uiController::start(int nbFile)
 
 void uiController::reverseDebugMode()
 {
-    //_game.notifyMessage(Game::PROPERTY_REVERSE_DEBUG_MODE, "ok");
     _game.reverseDebugMode();
+}
+
+void uiController::shufflePieces()
+{
+    _game.shufflePiecesPlayer();
 }
 
 void uiController::play(std::optional<Position> position, std::optional<int> number){
@@ -53,19 +57,23 @@ void uiController::play(std::optional<Position> position, std::optional<int> num
                 break;
             case END:
                 {
-                    std::string messageEnd = "Le gagnant de la partie est : ";
-                    switch(_game.getWinner()){
-                        case BLUE:
-                            messageEnd+= "le BLEU";
-                            break;
-                        case RED:
-                            messageEnd+= "le ROUGE";
-                            break;
-                        case NONE:
-                            messageEnd+= "AUCUN, c'est une égalité";
-                            break;
+                    if(number.has_value()){
+                        _game.restart(number.value());
+                    }else{
+                        std::string messageEnd = "Le gagnant de la partie est : ";
+                        switch(_game.getWinner()){
+                            case BLUE:
+                                messageEnd+= "le BLEU";
+                                break;
+                            case RED:
+                                messageEnd+= "le ROUGE";
+                                break;
+                            case NONE:
+                                messageEnd+= "AUCUN, c'est une égalité";
+                                break;
+                        }
+                        _game.notifyMessage(Game::PROPERTY_END_GAME, messageEnd);
                     }
-                    _game.notifyMessage(Game::PROPERTY_END_GAME, messageEnd);
                 }
                 break;
             default:

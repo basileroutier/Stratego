@@ -180,9 +180,6 @@ void Game::reverseDebugMode()
     notifyMessage(PROPERTY_REVERSE_DEBUG_MODE, "");
 }
 
-
-
-
 void Game::setTeamNextTurn()
 {
     switch (currentTeam_) {
@@ -262,12 +259,30 @@ bool Game::isMovePositionCorrect(Position newPosition) const
 void Game::start(int nbFile)
 {
     if(current_state_!=State::NOT_STARTED){
-        throw exception::IllegalStateException("Il n'est pas possible d'initialiser le jeu dans l'état actuelle", __FILE__, __FUNCTION__, __LINE__);
+            throw exception::IllegalStateException("Il n'est pas possible d'initialiser le jeu dans l'état actuelle", __FILE__, __FUNCTION__, __LINE__);
     }
 
     board_.initializeBoardPlayer(nbFile);
     notify(current_state_, *this);
     winnerGame = {};
+    changeState(State::PICK_PIECE);
+}
+
+void Game::restart(int nbFile)
+{
+    if(current_state_!=State::END){
+        throw exception::IllegalStateException("Il n'est pas possible d'initialiser le jeu dans l'état actuelle", __FILE__, __FUNCTION__, __LINE__);
+    }
+
+    changeState(State::RESTART);
+    winnerGame={};
+    ended_=false;
+    debug_mode_ = false;
+    currentTeam_ = TeamColor::RED;
+    winnerGame = TeamColor::NONE;
+    board_.initializeBoardPlayer(nbFile);
+
+    notify(current_state_, *this);
     changeState(State::PICK_PIECE);
 }
 
@@ -411,9 +426,41 @@ int Game::convertPositionToNumberOfMove(Position pos, Direction direction) const
     return numberOfMove;
 }
 
+void Game::shufflePiecesPlayer()
+{
+    std::vector<Position> allPositionsPlayer = getAllPositionFromCurrentPlayer();
+
+    int sizeAllPos = allPositionsPlayer.size()-1;
+    while(allPositionsPlayer.size()>1){
+        Position firstPosition = allPositionsPlayer.at(sizeAllPos);
+        Position secondPosition = allPositionsPlayer.at(rand() % allPositionsPlayer.size());
+        while(firstPosition==secondPosition){
+            secondPosition = allPositionsPlayer.at(rand() % allPositionsPlayer.size());
+        }
+        board_.randomMovePiece(firstPosition, secondPosition);
+        sizeAllPos--;
+        allPositionsPlayer.pop_back();
+    }
+    notifyMessage(PROPERTY_SHUFFLE_GAME,"");
+
+}
+
 void Game::notifyMessage(const std::string &property, const std::string &message) const
 {
     notify(property, message, *this);
+}
+
+std::vector<Position> Game::getAllPositionFromCurrentPlayer()
+{
+    std::vector<Position> allPositionPlayer;
+    for(int i=0;i<Board::row_;i++){
+        for(int j=0;j<Board::column_;j++){
+            if(board_.isCasePiece(Position{i,j}) && board_.isSameTeam(Position{i,j}, currentTeam_)){
+                allPositionPlayer.push_back(Position{i,j});
+            }
+        }
+    }
+    return allPositionPlayer;
 }
 
 void Game::resetAllPosition()

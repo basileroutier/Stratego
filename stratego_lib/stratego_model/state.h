@@ -14,7 +14,8 @@ namespace stratego {
         PICK_PIECE,
         MOVE_PIECE,
         UPDATING_BOARD,
-        END
+        END,
+        RESTART
     };
 }
 

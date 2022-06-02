@@ -10,5 +10,6 @@ int main()
     View view{game};
     Controller controller{game, view};
     controller.play();
+
     return 0;
 }

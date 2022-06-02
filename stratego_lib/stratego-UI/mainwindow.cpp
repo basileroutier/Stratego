@@ -20,7 +20,7 @@ MainWindow::MainWindow(uiController controller, QWidget * parent) :
      palette.setColor(ui->labelError->foregroundRole(), Qt::red);
      ui->labelError->setPalette(palette);
      ui->labelError->setWordWrap(true);
-
+    ui->shufflePiece->setVisible(false);
     QObject::connect(
         _uiBoard,
         SIGNAL(resend_value_from_cell(Position)),
@@ -47,6 +47,7 @@ void MainWindow::on_startButton_clicked()
     ui->debugMode->setEnabled(true);
     ui->spinBox->setVisible(false);
     ui->nbChargedFile->setVisible(false);
+    ui->shufflePiece->setVisible(true);
     _uiController.play(std::optional<Position>(), ui->spinBox->value());
 }
 
@@ -86,20 +87,26 @@ void MainWindow::update(const stratego::State state, Game & game)
         ui->stateLabel->setText(QString::fromStdString(stateString));
         break;
     case State::END:
+       {
         _uiBoard->updateBoard(game);
         clearTextError();
         stateString+="END";
         ui->stateLabel->setText(QString::fromStdString(stateString));
-        _uiController.play(std::optional<Position>(), 0);
+        _uiController.play(std::optional<Position>(), std::optional<int>());
+        }
         break;
-        default:
-            break;
+    case State::RESTART:
+        stateString+="PICK_PIECE";
+        _uiBoard->updateBoard(game);
+        ui->stateLabel->setText(QString::fromStdString(stateString));
+        break;
+    default:
+        break;
     }
 }
 
 void MainWindow::update(const std::string &property,  const std::string &message, const Game &game)
 {
-
     std::string mess = message;
     if(property==Game::PROPERTY_IS_FIGHT_BETWEEN_PIECE){
         mess+= "Pièce attaquant : "+ value_piece_to_string(game.getPiece(game.getCurrentPosition().value()).value().valuePiece())+ " ";
@@ -109,6 +116,13 @@ void MainWindow::update(const std::string &property,  const std::string &message
         _uiBoard->updateBoard(game);
     }else if(property==Game::PROPERTY_END_GAME){
         ui->labelError->setText(QString::fromStdString(mess));
+        ui->startButton->setVisible(true);
+        ui->startButton->setDisabled(false);
+        ui->spinBox->setVisible(true);
+        ui->spinBox->setDisabled(false);
+        ui->startButton->setText("Restart");
+    }else if(property==Game::PROPERTY_SHUFFLE_GAME){
+        _uiBoard->updateBoard(game);
     }else{
          ui->labelError->setText(QString::fromStdString(mess));
     }
@@ -119,5 +133,12 @@ void MainWindow::update(const std::string &property,  const std::string &message
 void MainWindow::on_debugMode_clicked()
 {
     _uiController.reverseDebugMode();
+}
+
+
+
+void MainWindow::on_shufflePiece_clicked()
+{
+    _uiController.shufflePieces();
 }
 

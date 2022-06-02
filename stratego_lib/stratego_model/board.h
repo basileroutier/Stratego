@@ -8,6 +8,7 @@
 #include "case.h"
 #include <optional>
 #include "direction.h"
+#include <vector>
 
 
 
@@ -223,6 +224,8 @@ namespace stratego {
          * @param newPos Position: new position in the board
          */
         void combat(Position currentPos, Position newPos);
+
+        void randomMovePiece(Position firstPos, Position secondPos);
 
         private :
 
