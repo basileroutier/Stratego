@@ -16,8 +16,7 @@ Mais à cette époque, le jeu restait un jeu de table. Depuis, on ne sait d'où,
 **Source : Wikipedia. Lien : https://fr.wikipedia.org/wiki/Stratego_(homonymie)**
 
 Projet créer par :
-		- Basile Routier - 54018
-		- Ian Cotton - 55019
+		- Basile Routier
 
 ## Header
 ~~Tous les headers se trouvent dans le dossier Stratego~~
